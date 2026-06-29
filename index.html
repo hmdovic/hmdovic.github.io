@@ -1,287 +1,186 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vormiq | Short-form content & branding</title>
-<meta name="description" content="Vormiq maakt short-form video, branding en creatieve content voor merken die aandacht willen winnen en online zichtbaar willen worden.">
-<meta name="keywords" content="content creation, short form video, branding, social media marketing, video editing, virale content">
-<meta name="author" content="Vormiq">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Vormiq | Creative Studio">
-<meta property="og:description" content="Short-form content, satire en branding die aandacht pakt.">
-<meta property="og:type" content="website">
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+<title>Portfolio</title>
 
 <style>
-
-/* BASE */
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-background:#050505;
-color:white;
-font-family:Inter,sans-serif;
-overflow-x:hidden;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #111;
 }
 
-/* HEADER */
-header{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:16px 6%;
-background:rgba(5,5,5,0.75);
-backdrop-filter:blur(18px);
-border-bottom:1px solid rgba(255,255,255,0.05);
-z-index:999;
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
 }
 
-.logo-wrapper{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-gap:2px;
+/* LOGO GROTER */
+.logo img {
+  height: 60px;
+  width: auto;
 }
 
-.logo{
-height:70px;
+/* MENU */
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.logo-sub{
-font-size:0.7rem;
-color:#888;
-letter-spacing:2px;
-text-transform:uppercase;
+.nav-links li a {
+  text-decoration: none;
+  color: #111;
+  font-size: 14px;
 }
 
-/* HERO */
-.hero{
-min-height:65vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:140px 6% 40px;
+/* SECTION */
+#creaties {
+  padding: 60px 24px;
 }
 
-.hero h1{
-font-size:clamp(2.2rem,5vw,4rem);
-font-weight:900;
-line-height:1.05;
+.section-subtitle {
+  opacity: 0.6;
+  margin-bottom: 8px;
 }
 
-.hero p{
-max-width:720px;
-color:#aaa;
-margin-top:15px;
-font-size:1.05rem;
+.section-title {
+  font-size: 28px;
+  margin-bottom: 32px;
+  line-height: 1.2;
 }
 
 /* GRID */
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:18px;
-padding:50px 6%;
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
 }
 
 /* CARD */
-.card{
-position:relative;
-border-radius:18px;
-overflow:hidden;
-background:black;
-border:1px solid rgba(255,255,255,0.06);
-cursor:pointer;
-transition:0.3s;
+.case-card {
+  display: flex;
+  flex-direction: column;
 }
 
-.card:hover{
-transform:scale(1.02);
-border-color:#CCFF00;
+.case-media video {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
 }
 
-.card video{
-width:100%;
-height:420px;
-object-fit:cover;
-display:block;
+.case-content {
+  padding-top: 10px;
 }
 
-/* MODAL */
-.modal{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,0.95);
-display:none;
-align-items:center;
-justify-content:center;
-z-index:1000;
+.case-content h3 {
+  margin: 0;
+  font-size: 16px;
 }
 
-.modal video{
-width:80%;
-max-height:85vh;
+.case-content p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #333;
 }
 
-.close{
-position:absolute;
-top:20px;
-right:25px;
-font-size:2.5rem;
-cursor:pointer;
+.case-meta {
+  font-size: 12px;
+  color: #666;
 }
 
-/* ===================== */
-/* MOBILE OPTIMISATION   */
-/* ===================== */
-@media (max-width:768px){
+/* MOBILE */
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 22px;
+  }
 
-header{padding:14px 5%;}
-.logo{height:58px;}
-.logo-sub{font-size:0.65rem;}
+  .nav-links {
+    gap: 12px;
+  }
 
-.hero{padding:140px 5% 50px;}
-.hero h1{font-size:2.1rem;}
-.hero p{font-size:1rem;}
-
-.grid{
-grid-template-columns:1fr;
-gap:14px;
-padding:40px 5%;
+  .logo img {
+    height: 48px;
+  }
 }
-
-.card video{
-height:72vh;
-}
-
-.modal video{
-width:95%;
-}
-
-.close{
-top:15px;
-right:15px;
-}
-}
-
-/* smooth glow */
-.card::after{
-content:"";
-position:absolute;
-inset:0;
-background:radial-gradient(circle at center, rgba(204,255,0,0.08), transparent 60%);
-opacity:0;
-transition:0.3s;
-pointer-events:none;
-}
-
-.card:hover::after{
-opacity:1;
-}
-
 </style>
-
-<!-- SEO STRUCTURED DATA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Vormiq",
-  "description": "Creative studio for short-form content, branding and viral video production.",
-  "url": "https://vormiq.com"
-}
-</script>
-
 </head>
 
 <body>
 
-<header>
-    <div class="logo-wrapper">
-        <img src="logo.png" class="logo" alt="Vormiq logo">
-        <div class="logo-sub">Creative Studio</div>
-    </div>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+  </div>
+
+  <ul class="nav-links">
+    <li><a href="#creaties">Werk</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </header>
 
-<section class="hero">
-    <h1>Content die aandacht vasthoudt.</h1>
-    <p>Short-form video, satire en experimenten gemaakt om bekeken te worden.</p>
+<!-- PORTFOLIO -->
+<section id="creaties">
+    <p class="section-subtitle">Werk</p>
+    <h2 class="section-title">Content die aandacht vasthoudt en blijft hangen</h2>
+
+    <div class="case-grid">
+
+        <div class="case-card">
+            <div class="case-media">
+                <video src="verward.mp4" muted loop playsinline></video>
+            </div>
+            <div class="case-content">
+                <h3>Verward Campaign</h3>
+                <p>Korte video die direct de aandacht grijpt</p>
+                <p class="case-meta">Getest op eerste 3 seconden aandacht en kijkduur</p>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-media">
+                <video src="flodders.mp4" muted loop playsinline></video>
+            </div>
+            <div class="case-content">
+                <h3>Flodders Style Edit</h3>
+                <p>Humor-based edit met focus op bereik</p>
+                <p class="case-meta">Gemaakt om snel gedeeld te worden</p>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-media">
+                <video src="skiezo.mp4" muted loop playsinline></video>
+            </div>
+            <div class="case-content">
+                <h3>Skiezo Concept</h3>
+                <p>Experiment met nieuwe visuele stijl</p>
+                <p class="case-meta">Test voor merkgevoel en herkenning</p>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-media">
+                <video src="teletubbies.mp4" muted loop playsinline></video>
+            </div>
+            <div class="case-content">
+                <h3>Teletubbies Remix</h3>
+                <p>Nostalgie gebruikt als aandachtshook</p>
+                <p class="case-meta">Emotie gestuurd kijkgedrag</p>
+            </div>
+        </div>
+
+    </div>
 </section>
-
-<section class="grid">
-
-    <div class="card" onclick="openVideo('verward.mp4')">
-        <video src="verward.mp4" muted loop autoplay playsinline></video>
-    </div>
-
-    <div class="card" onclick="openVideo('flodders.mp4')">
-        <video src="flodders.mp4" muted loop autoplay playsinline></video>
-    </div>
-
-    <div class="card" onclick="openVideo('skiezo.mp4')">
-        <video src="skiezo.mp4" muted loop autoplay playsinline></video>
-    </div>
-
-    <div class="card" onclick="openVideo('teletubbies.mp4')">
-        <video src="teletubbies.mp4" muted loop autoplay playsinline></video>
-    </div>
-
-</section>
-
-<!-- FULLSCREEN PLAYER -->
-<div class="modal" id="modal">
-    <div class="close" onclick="closeVideo()">×</div>
-    <video id="modalVideo" controls autoplay></video>
-</div>
-
-<script>
-
-/* OPEN FULLSCREEN */
-function openVideo(src){
-    const modal = document.getElementById('modal');
-    const video = document.getElementById('modalVideo');
-
-    modal.style.display = 'flex';
-    video.src = src;
-    video.muted = false;
-    video.play();
-}
-
-/* CLOSE */
-function closeVideo(){
-    const modal = document.getElementById('modal');
-    const video = document.getElementById('modalVideo');
-
-    modal.style.display = 'none';
-    video.pause();
-    video.src = "";
-}
-
-/* PAUSE WHEN NOT VISIBLE (performance upgrade) */
-const videos = document.querySelectorAll("video");
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.play();
-        } else {
-            entry.target.pause();
-        }
-    });
-}, { threshold: 0.6 });
-
-videos.forEach(v => observer.observe(v));
-
-</script>
 
 </body>
 </html>
