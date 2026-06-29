@@ -1,77 +1,310 @@
-<!DOCTYPE html>
-<html lang="nl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vormiq | AI-Driven Content Agency</title>
-    <style>
-        :root { --bg: #0D0D0D; --neon-green: #BBF00; --purple: #7B00FF; --white: #F5F5F5; }
-        body { background-color: var(--bg); color: var(--white); font-family: sans-serif; margin: 0; line-height: 1.6; }
-        
-        /* Navigatie */
-        nav { display: flex; justify-content: space-between; padding: 30px 5%; align-items: center; background: rgba(13,13,13,0.9); position: sticky; top: 0; z-index: 100; }
-        .logo-nav { width: 140px; }
-        .nav-links a { color: var(--white); margin-left: 30px; text-decoration: none; font-weight: bold; font-size: 0.9rem; text-transform: uppercase; }
+<!-- ================= HERO ================= -->
 
-        /* Hero */
-        .hero { text-align: center; padding: 120px 5%; background: linear-gradient(180deg, #1a1a1a, var(--bg)); }
-        h1 { font-size: 4rem; margin-bottom: 20px; background: linear-gradient(90deg, var(--neon-green), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        
-        /* Secties */
-        section { padding: 100px 5%; max-width: 1200px; margin: 0 auto; }
-        h2 { font-size: 2.5rem; margin-bottom: 50px; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        .card { background: #1C1C1C; padding: 40px; border-radius: 15px; border: 1px solid #333; transition: 0.3s; }
-        .card:hover { border-color: var(--neon-green); }
+<section class="hero">
 
-        /* Portfolio */
-        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
-        .p-item { background: #222; height: 300px; display: flex; align-items: center; justify-content: center; border-radius: 10px; font-weight: bold; border: 2px solid transparent; }
-        .p-item:hover { border-color: var(--purple); }
-
-        /* Footer */
-        footer { padding: 50px; text-align: center; border-top: 1px solid #333; margin-top: 50px; color: #888; }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <img src="logo.png" class="logo-nav">
-        <div class="nav-links">
-            <a href="#diensten">Diensten</a>
-            <a href="#portfolio">Cases</a>
-            <a href="mailto:info@vormiq.nl">Contact</a>
-        </div>
-    </nav>
-
-    <div class="hero">
-        <h1>VORM. INTELLIGENTIE. TOEKOMST.</h1>
-        <p style="font-size: 1.4rem; max-width: 700px; margin: 0 auto;">Wij transformeren jouw merk met AI-gedreven content. Van virale promo's tot volledige automatisering. Vormiq is de partner voor de nieuwe digitale economie.</p>
-        <br><br>
-        <a href="mailto:info@vormiq.nl" style="padding: 20px 40px; background: var(--neon-green); color: var(--bg); font-weight: bold; text-decoration: none; border-radius: 5px;">START SAMENWERKING</a>
+    <div class="hero-badge">
+        ⚡ Video • Branding • Content • Websites • Groei
     </div>
 
-    <section id="diensten">
-        <h2>Onze Kernactiviteiten</h2>
-        <div class="grid">
-            <div class="card"><h3>AI-Video Content</h3><p>High-end promo's die de algoritmes begrijpen. Wij creëren content die niet alleen gezien wordt, maar converteert.</p></div>
-            <div class="card"><h3>Brand Identity</h3><p>Een visuele identiteit die staat als een huis. Wij vertalen jouw visie naar een herkenbare merkstijl.</p></div>
-            <div class="card"><h3>AI-Automatisering</h3><p>Maximaliseer je output met minimale input. Wij implementeren slimme AI-workflows in jouw bedrijfsproces.</p></div>
+    <h1>
+        Laat mensen stoppen met scrollen.<br>
+        Laat ze kijken.<br>
+        <span class="gradient-text">Laat ze je onthouden.</span>
+    </h1>
+
+    <p class="hero-text">
+        Vormiq helpt bedrijven, merken en creators groeien met video's,
+        branding en digitale ervaringen die aandacht trekken,
+        vertrouwen opbouwen en klanten opleveren.
+    </p>
+
+    <p class="hero-subtext">
+        Van een eerste indruk tot een complete merkbeleving.
+        Alles moet kloppen.
+    </p>
+
+    <div class="hero-buttons">
+        <a href="https://wa.me/31657971118" class="btn-primary">
+            💬 Start direct via WhatsApp
+        </a>
+
+        <a href="#creaties" class="btn-secondary">
+            Bekijk onze creaties
+        </a>
+    </div>
+
+    <div class="hero-trust">
+        <div>✓ Persoonlijk contact</div>
+        <div>✓ Snel schakelen</div>
+        <div>✓ Geen standaard oplossingen</div>
+        <div>✓ Gericht op resultaat</div>
+    </div>
+
+</section>
+
+
+<!-- ================= WAAROM ================= -->
+
+<section class="attention-section">
+
+    <span class="section-label">
+        WAAROM DIT WERKT
+    </span>
+
+    <h2>
+        Je concurreert niet om klanten.
+        <br>
+        Je concurreert om aandacht.
+    </h2>
+
+    <p>
+        Iedere dag zien mensen duizenden video's,
+        advertenties en berichten.
+    </p>
+
+    <p>
+        De meeste verdwijnen binnen enkele seconden weer uit het geheugen.
+    </p>
+
+    <p>
+        Sterke merken doen iets anders.
+    </p>
+
+    <p class="highlight-text">
+        Ze zorgen ervoor dat mensen stoppen.
+        Kijken.
+        En terugkomen.
+    </p>
+
+    <p>
+        Dat is precies waar Vormiq voor gebouwd is.
+    </p>
+
+</section>
+
+
+<!-- ================= DIENSTEN ================= -->
+
+<section id="diensten">
+
+    <span class="section-label">
+        WAT WIJ MAKEN
+    </span>
+
+    <h2>
+        Creativiteit met een doel.
+    </h2>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <h3>🎬 Promo video's</h3>
+            <p>
+                Video's die aandacht trekken,
+                vertrouwen opbouwen en jouw verhaal duidelijk vertellen.
+            </p>
         </div>
-    </section>
 
-    <section id="portfolio">
-        <h2>Portfolio Showcase</h2>
-        <div class="portfolio-grid">
-            <div class="p-item">VIDEO CASE 01</div>
-            <div class="p-item">VIDEO CASE 02</div>
-            <div class="p-item">VIDEO CASE 03</div>
+        <div class="service-card">
+            <h3>📱 Shortform content</h3>
+            <p>
+                TikTok, Reels en Shorts ontworpen voor bereik,
+                interactie en groei.
+            </p>
         </div>
-    </section>
 
-    <footer>
-        <p>&copy; 2026 Vormiq - AI Solutions & Automations. All Rights Reserved.</p>
-    </footer>
+        <div class="service-card">
+            <h3>🎨 Logo & Branding</h3>
+            <p>
+                Een merkidentiteit die professioneel voelt
+                voordat iemand ook maar één woord gelezen heeft.
+            </p>
+        </div>
 
-</body>
-</html>
+        <div class="service-card">
+            <h3>🌐 Websites</h3>
+            <p>
+                Websites die bezoekers veranderen in klanten.
+                Snel, duidelijk en conversiegericht.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>🚀 Content strategie</h3>
+            <p>
+                Niet zomaar posten,
+                maar bouwen aan een merk dat blijft hangen.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>🤖 AI & Automatisering</h3>
+            <p>
+                Slimmere processen zodat jij meer tijd hebt
+                voor ondernemen en groeien.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PSYCHOLOGIE ================= -->
+
+<section class="psychology">
+
+    <span class="section-label">
+        DE ECHTE REDEN WAAROM MENSEN KOPEN
+    </span>
+
+    <div class="psychology-grid">
+
+        <div class="psychology-card">
+            <h3>Mensen kopen geen video.</h3>
+            <p>Ze kopen aandacht.</p>
+        </div>
+
+        <div class="psychology-card">
+            <h3>Mensen kopen geen logo.</h3>
+            <p>Ze kopen herkenbaarheid.</p>
+        </div>
+
+        <div class="psychology-card">
+            <h3>Mensen kopen geen website.</h3>
+            <p>Ze kopen vertrouwen.</p>
+        </div>
+
+        <div class="psychology-card">
+            <h3>Mensen kopen geen marketing.</h3>
+            <p>Ze kopen groei.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CREATIES ================= -->
+
+<section id="creaties">
+
+    <span class="section-label">
+        ONZE CREATIES
+    </span>
+
+    <h2>
+        Binnenkort vullen wij deze ruimte
+        met projecten waar we trots op zijn.
+    </h2>
+
+    <p>
+        Promo video's.
+        Branding.
+        Logo's.
+        Social content.
+        Websites.
+        Campagnes.
+    </p>
+
+    <p>
+        Niet om te laten zien wat wij kunnen,
+        maar om te laten zien wat mogelijk wordt
+        wanneer creativiteit, strategie en technologie samenkomen.
+    </p>
+
+    <div class="portfolio-placeholder">
+
+        <div class="portfolio-box">
+            Jouw volgende project?
+        </div>
+
+        <div class="portfolio-box">
+            Binnenkort beschikbaar
+        </div>
+
+        <div class="portfolio-box">
+            Vormiq Creatie
+        </div>
+
+        <div class="portfolio-box">
+            Vormiq Creatie
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OVER ONS ================= -->
+
+<section class="about">
+
+    <span class="section-label">
+        OVER VORMIQ
+    </span>
+
+    <h2>
+        Vorm.
+        Intelligentie.
+        Toekomst.
+    </h2>
+
+    <p>
+        Vormiq is ontstaan vanuit een simpele gedachte:
+    </p>
+
+    <p class="big-text">
+        Goede ideeën verdienen het om gezien te worden.
+    </p>
+
+    <p>
+        Daarom bouwen wij merken,
+        content en digitale ervaringen die mensen onthouden.
+    </p>
+
+    <p>
+        Geen standaard templates.
+        Geen generieke oplossingen.
+        Geen inhoud zonder richting.
+    </p>
+
+    <p>
+        Alleen werk dat klopt.
+    </p>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="contact-section">
+
+    <h2>
+        Klaar om op te vallen?
+    </h2>
+
+    <p>
+        Of je nu een logo nodig hebt,
+        video's wilt maken,
+        jouw merk wilt laten groeien
+        of simpelweg wilt sparren over mogelijkheden:
+    </p>
+
+    <p class="contact-highlight">
+        Stuur een bericht.
+        We reageren snel.
+    </p>
+
+    <a href="https://wa.me/31657971118" class="contact-button">
+        💬 WhatsApp direct naar 06 57 97 11 18
+    </a>
+
+</section>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a href="https://wa.me/31657971118" class="floating-whatsapp">
+    <img src="whatsapp-icon.png" alt="WhatsApp">
+</a>
