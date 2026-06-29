@@ -1,185 +1,542 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vormiq | Video, Branding & Groei voor bedrijven</title>
+
+<meta name="description" content="Meer aandacht, meer vertrouwen en een sterkere uitstraling voor jouw bedrijf met video's, branding, websites en content van Vormiq.">
+
+<meta name="keywords" content="promo video, bedrijfsvideo, branding, logo ontwerp, website laten maken, tiktok video, social media content">
+
+<meta property="og:title" content="Vormiq">
+<meta property="og:description" content="Meer aandacht. Meer vertrouwen. Meer klanten.">
+<meta property="og:image" content="logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:#080808;
+color:white;
+overflow-x:hidden;
+line-height:1.7;
+}
+
+body::before{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#B8FF00;
+filter:blur(220px);
+opacity:.07;
+top:-200px;
+left:-150px;
+pointer-events:none;
+}
+
+body::after{
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#7B00FF;
+filter:blur(250px);
+opacity:.10;
+right:-200px;
+bottom:-250px;
+pointer-events:none;
+}
+
+header{
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(8,8,8,.75);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255,255,255,.05);
+z-index:999;
+}
+
+.logo{
+height:60px;
+}
+
+nav{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#B8FF00;
+}
+
+.cta{
+background:#B8FF00;
+color:black;
+padding:14px 26px;
+border-radius:999px;
+font-weight:700;
+text-decoration:none;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 10%;
+}
+
+.badge{
+padding:10px 18px;
+border:1px solid rgba(255,255,255,.08);
+background:rgba(255,255,255,.03);
+border-radius:999px;
+margin-bottom:30px;
+font-size:14px;
+}
+
+.hero h1{
+font-size:clamp(3rem,8vw,7rem);
+line-height:1;
+font-weight:900;
+margin-bottom:30px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#B8FF00,#7B00FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:850px;
+font-size:1.25rem;
+color:#BEBEBE;
+margin-bottom:40px;
+}
+
+.buttons{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.btn-primary{
+background:#B8FF00;
+color:black;
+padding:18px 34px;
+border-radius:999px;
+font-weight:700;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+box-shadow:0 0 35px rgba(184,255,0,.4);
+}
+
+.btn-secondary{
+border:1px solid rgba(255,255,255,.15);
+padding:18px 34px;
+border-radius:999px;
+text-decoration:none;
+color:white;
+font-weight:600;
+}
+
+section{
+padding:110px 8%;
+max-width:1400px;
+margin:auto;
+}
+
+.section-title{
+font-size:3rem;
+margin-bottom:25px;
+}
+
+.section-text{
+color:#BEBEBE;
+max-width:900px;
+font-size:1.1rem;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.card{
+background:#111;
+padding:35px;
+border-radius:28px;
+border:1px solid rgba(255,255,255,.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+border-color:#B8FF00;
+}
+
+.card h3{
+margin-bottom:15px;
+font-size:1.4rem;
+}
+
+.card p{
+color:#BEBEBE;
+}
+
+.price{
+font-size:2rem;
+font-weight:800;
+color:#B8FF00;
+margin-top:15px;
+}
+
+.placeholder{
+height:250px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:28px;
+background:#111;
+border:2px dashed rgba(255,255,255,.08);
+color:#666;
+font-size:1.2rem;
+}
+
+.faq{
+background:#111;
+padding:30px;
+border-radius:24px;
+margin-bottom:20px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact h2{
+font-size:3rem;
+margin-bottom:20px;
+}
+
+.contact p{
+max-width:700px;
+margin:auto;
+color:#BEBEBE;
+margin-bottom:40px;
+}
+
+footer{
+padding:60px;
+text-align:center;
+color:#777;
+}
+
+.whatsapp{
+position:fixed;
+right:25px;
+bottom:25px;
+width:90px;
+height:90px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:42px;
+text-decoration:none;
+box-shadow:0 0 35px rgba(37,211,102,.8);
+z-index:999;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{
+transform:scale(1.08);
+}
+}
+
+@media(max-width:900px){
+
+nav a{
+display:none;
+}
+
+.hero h1{
+font-size:3rem;
+}
+
+.section-title{
+font-size:2.2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
 <header>
 
-LOGO.PNG
+<img src="logo.png" class="logo">
 
-Home
-Diensten
-Prijzen
-Creaties
-FAQ
-Contact
-
-[ WhatsApp ]
+<nav>
+<a href="#diensten">Diensten</a>
+<a href="#prijzen">Prijzen</a>
+<a href="#creaties">Creaties</a>
+<a href="#faq">FAQ</a>
+<a href="#contact" class="cta">Contact</a>
+</nav>
 
 </header>
 
----------------------------------------------------
+<section class="hero">
 
-HERO
+<div class="badge">
+⚡ Video • Branding • Websites • Groei
+</div>
 
-Je bedrijf verdient meer aandacht
-dan het nu krijgt.
+<h1>
+Je bedrijf verdient waarschijnlijk
+meer aandacht dan het nu krijgt.
+<br><br>
+<span class="gradient">
+Daar helpen wij bij.
+</span>
+</h1>
 
-Niet door harder te schreeuwen.
+<p>
+Goede bedrijven verliezen dagelijks klanten omdat ze niet professioneel genoeg overkomen, niet zichtbaar genoeg zijn of simpelweg vergeten worden.
 
-Maar door beter zichtbaar te zijn.
+Vormiq helpt bedrijven groeien met video's, branding, websites en content die vertrouwen opbouwen en mensen laten onthouden waarom ze voor jou moeten kiezen.
+</p>
 
-Vormiq helpt bedrijven groeien met video's,
-branding, websites en content die mensen onthouden.
+<div class="buttons">
 
-[ Start via WhatsApp ]
-[ Bekijk ons werk ]
+<a href="https://wa.me/31657971118" class="btn-primary">
+💬 Start direct via WhatsApp
+</a>
 
-✓ Direct contact
-✓ Snelle levering
-✓ Geen standaard oplossingen
-✓ Gebouwd voor groei
+<a href="#creaties" class="btn-secondary">
+Bekijk onze creaties
+</a>
 
----------------------------------------------------
+</div>
 
-WAAROM DIT WERKT
+</section>
 
+<section>
+
+<h2 class="section-title">
 De meeste bedrijven hebben geen kwaliteitsprobleem.
+</h2>
 
+<h2 class="section-title gradient">
 Ze hebben een zichtbaarheidsprobleem.
+</h2>
 
-Je kunt het beste product hebben.
+<p class="section-text">
+Je kunt de beste service leveren.
 
-De beste service.
+Het beste product hebben.
 
-De meeste kennis.
+Meer ervaring hebben dan de concurrent.
 
-Maar als niemand stopt met kijken,
-bestaat het voor de buitenwereld niet.
+Maar als mensen dat niet binnen enkele seconden begrijpen, kiezen ze vaak voor iemand anders.
 
-Daar lossen wij op.
+Daar ontwerpen wij voor.
+</p>
 
----------------------------------------------------
+</section>
 
-DIENSTEN
+<section id="diensten">
 
-🎬 Promo video's
-Video's die aandacht trekken en vertrouwen opbouwen.
+<h2 class="section-title">
+Wat wij doen
+</h2>
 
-📱 TikTok & Shortform Content
-Content ontworpen voor bereik, interactie en groei.
+<div class="grid">
 
-🎨 Logo & Branding
-Een identiteit die professioneel voelt voordat iemand iets gelezen heeft.
+<div class="card">
+<h3>🎬 Promo video's</h3>
+<p>Video's die aandacht trekken en vertrouwen opbouwen.</p>
+</div>
 
-🌐 Websites
-Websites die bezoekers veranderen in klanten.
+<div class="card">
+<h3>📱 TikTok & Reels</h3>
+<p>Shortform content ontworpen voor bereik en groei.</p>
+</div>
 
-🤖 AI & Automatisering
-Slimmere processen zodat jij kunt ondernemen.
+<div class="card">
+<h3>🎨 Branding & Logo's</h3>
+<p>Een merkidentiteit die professioneel voelt vanaf de eerste seconde.</p>
+</div>
 
-📚 Tutorials & Educatie
-Content waarmee je autoriteit opbouwt.
+<div class="card">
+<h3>🌐 Websites</h3>
+<p>Websites die bezoekers veranderen in klanten.</p>
+</div>
 
----------------------------------------------------
+<div class="card">
+<h3>🤖 AI oplossingen</h3>
+<p>Slimmere workflows en automatisering voor bedrijven.</p>
+</div>
 
-VOOR WIE
+<div class="card">
+<h3>📚 Tutorials</h3>
+<p>Educatieve content waarmee je autoriteit opbouwt.</p>
+</div>
 
-✓ Bedrijven
-✓ Ondernemers
-✓ Creators
-✓ Persoonlijke merken
-✓ Startups
-✓ Lokale bedrijven
+</div>
 
----------------------------------------------------
+</section>
 
-HOE WE WERKEN
+<section id="prijzen">
 
-1. Kennismaking
-We leren jouw bedrijf kennen.
+<h2 class="section-title">
+Indicatieve prijzen
+</h2>
 
-2. Strategie
-We bepalen samen het doel.
+<div class="grid">
 
-3. Creatie
-Wij bouwen wat nodig is.
+<div class="card">
+<h3>Logo ontwerp</h3>
+<div class="price">vanaf €199</div>
+</div>
 
-4. Groei
-Jij gebruikt het om verder te groeien.
+<div class="card">
+<h3>Branding pakket</h3>
+<div class="price">vanaf €499</div>
+</div>
 
----------------------------------------------------
+<div class="card">
+<h3>Promo video</h3>
+<div class="price">vanaf €349</div>
+</div>
 
-PRIJZEN
+<div class="card">
+<h3>Website</h3>
+<div class="price">vanaf €799</div>
+</div>
 
-Logo ontwerp
-Vanaf €199
+</div>
 
-Branding pakket
-Vanaf €499
+</section>
 
-Promo video
-Vanaf €349
+<section id="creaties">
 
-Website
-Vanaf €799
+<h2 class="section-title">
+Onze creaties
+</h2>
 
-Content abonnement
-Op aanvraag
+<p class="section-text">
+Hier verschijnen binnenkort video's, branding projecten, websites en campagnes.
 
-Maatwerk mogelijk.
+De website is hier alvast volledig op voorbereid zodat nieuwe projecten later eenvoudig toegevoegd kunnen worden.
+</p>
 
----------------------------------------------------
+<div class="grid">
 
-ONZE CREATIES
+<div class="placeholder">Project 01</div>
+<div class="placeholder">Project 02</div>
+<div class="placeholder">Project 03</div>
+<div class="placeholder">Jouw project hier?</div>
 
-Hier verschijnen binnenkort onze projecten.
+</div>
 
-Video's.
-Websites.
-Branding.
-Campagnes.
+</section>
 
-Deze website is hier volledig op voorbereid.
+<section id="faq">
 
----------------------------------------------------
+<h2 class="section-title">
+Veelgestelde vragen
+</h2>
 
-FAQ
+<div class="faq">
+<strong>Hoe snel leveren jullie?</strong>
+<p>Dat hangt af van het project. Kleine opdrachten kunnen vaak binnen enkele dagen geleverd worden.</p>
+</div>
 
-Hoe snel leveren jullie?
-Afhankelijk van het project meestal binnen enkele dagen tot weken.
+<div class="faq">
+<strong>Kan ik alleen een logo laten maken?</strong>
+<p>Ja, losse projecten zijn mogelijk.</p>
+</div>
 
-Kan ik alleen een logo laten maken?
-Ja.
+<div class="faq">
+<strong>Kan ik direct via WhatsApp contact opnemen?</strong>
+<p>Ja, we reageren meestal snel.</p>
+</div>
 
-Kan ik alleen video's laten maken?
-Ja.
+</section>
 
-Kan ik via WhatsApp contact opnemen?
-Ja, direct via 06 57 97 11 18.
+<section class="contact" id="contact">
 
----------------------------------------------------
-
-CONTACT
-
+<h2>
 Klaar om op te vallen?
+</h2>
 
-Stuur een bericht.
+<p>
+Of je nu meer bereik wilt, professioneler wilt overkomen of simpelweg wilt groeien:
 
-We reageren snel.
+stuur een bericht.
 
-[ WhatsApp 06 57 97 11 18 ]
+We denken graag met je mee.
+</p>
 
----------------------------------------------------
+<a href="https://wa.me/31657971118" class="btn-primary">
+💬 WhatsApp 06 57 97 11 18
+</a>
 
-FOOTER
+</section>
 
-Vormiq
+<footer>
 
-Video.
-Branding.
-Content.
-Groei.
+Vormiq — Vorm. Intelligentie. Toekomst.
 
-KvK
-E-mail
-Instagram
-TikTok
-WhatsApp
+</footer>
 
-© 2025 Vormiq
+<a href="https://wa.me/31657971118" class="whatsapp">
+💬
+</a>
+
+</body>
+</html>
