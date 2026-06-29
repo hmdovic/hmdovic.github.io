@@ -10,8 +10,13 @@
 
 <style>
 
-/* BASE */
-*{margin:0;padding:0;box-sizing:border-box;}
+/* ================= BASE ================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:'Inter',sans-serif;
@@ -21,7 +26,7 @@ overflow-x:hidden;
 padding-top:140px;
 }
 
-/* glow */
+/* GLOW */
 body::before,
 body::after{
 content:"";
@@ -33,18 +38,21 @@ opacity:.08;
 z-index:-1;
 }
 
-body::before{background:#CCFF00;top:-200px;left:-200px;}
-body::after{background:#7B00FF;bottom:-250px;right:-250px;}
+body::before{background:#CCFF00; top:-200px; left:-200px;}
+body::after{background:#7B00FF; bottom:-250px; right:-250px;}
 
-/* cursor */
+/* CURSOR */
 .cursor{
-width:14px;height:14px;border-radius:50%;
+width:14px;
+height:14px;
+border-radius:50%;
 background:#CCFF00;
 position:fixed;
 transform:translate(-50%,-50%);
 pointer-events:none;
 z-index:9999;
 mix-blend-mode:difference;
+box-shadow:0 0 25px rgba(204,255,0,.35);
 }
 
 /* HEADER */
@@ -74,7 +82,10 @@ font-weight:600;
 transition:.3s;
 }
 
-nav a:hover{opacity:1;color:#CCFF00;}
+nav a:hover{
+opacity:1;
+color:#CCFF00;
+}
 
 /* HERO */
 .hero{
@@ -251,7 +262,7 @@ margin-top:10px;
 display:block;
 }
 
-/* GRID */
+/* GRID 4 COL */
 .grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -267,19 +278,34 @@ margin-top:60px;
 .grid{grid-template-columns:1fr;}
 }
 
+/* VIDEO PREMIUM FIX */
 .card{
+position:relative;
 border-radius:22px;
 overflow:hidden;
 aspect-ratio:9/16;
 border:1px solid rgba(255,255,255,.05);
 background:#111;
+transition:.4s;
 }
 
 .card video{
 width:100%;
 height:100%;
 object-fit:cover;
-display:block;
+transition:.6s ease;
+filter:brightness(.95);
+}
+
+.card:hover{
+transform:translateY(-10px);
+border-color:#CCFF00;
+box-shadow:0 30px 80px rgba(204,255,0,.15);
+}
+
+.card:hover video{
+transform:scale(1.08);
+filter:brightness(.7);
 }
 
 /* CONTACT */
@@ -313,125 +339,125 @@ z-index:999;
 
 <header>
 
-    <img src="logo.png" class="logo">
+<img src="logo.png" class="logo">
 
-    <nav>
-        <a href="#prijzen">Prijzen</a>
-        <a href="#creaties">Cases</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<nav>
+    <a href="#prijzen">Prijzen</a>
+    <a href="#creaties">Cases</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 </header>
 
 <!-- HERO -->
 <section class="hero">
 
-    <h1>
-        Stop met content maken.<br>
-        <span class="gradient">Start met domineren 🚀</span>
-    </h1>
+<h1>
+Stop met content maken.<br>
+<span class="gradient">Start met domineren 🚀</span>
+</h1>
 
-    <p>
-        AI content & branding systemen die aandacht omzetten in groei, leads en merkautoriteit.
-    </p>
+<p>
+AI content & branding systemen die aandacht omzetten in groei, leads en autoriteit.
+</p>
 
-    <div class="buttons">
-        <a class="btn btn-primary" href="https://wa.me/31657971118">🔥 Start direct</a>
-        <a class="btn btn-secondary" href="#creaties">Bekijk cases</a>
-    </div>
+<div class="buttons">
+<a class="btn btn-primary" href="https://wa.me/31657971118">🔥 Start direct</a>
+<a class="btn btn-secondary" href="#creaties">Bekijk cases</a>
+</div>
 
 </section>
 
 <!-- STATS -->
 <section class="reveal">
 
-    <div class="subtitle">📊 RESULTATEN</div>
-    <div class="title">Bewezen impact</div>
+<div class="subtitle">📊 RESULTATEN</div>
+<div class="title">Bewezen impact</div>
 
-    <div class="stats">
+<div class="stats">
 
-        <div class="stat"><h3>12.4M+</h3><p>Views 📈</p></div>
-        <div class="stat"><h3>68K+</h3><p>Engagement 💬</p></div>
-        <div class="stat"><h3>+420%</h3><p>Growth 🚀</p></div>
+<div class="stat"><h3>12.4M+</h3><p>Views 📈</p></div>
+<div class="stat"><h3>68K+</h3><p>Engagement 💬</p></div>
+<div class="stat"><h3>+420%</h3><p>Growth 🚀</p></div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- PRICING -->
 <section id="prijzen" class="reveal">
 
-    <div class="subtitle">💰 PRIJZEN</div>
-    <div class="title">Toegankelijke pakketten</div>
+<div class="subtitle">💰 PRIJZEN</div>
+<div class="title">Toegankelijke pakketten</div>
 
-    <div class="pricing">
+<div class="pricing">
 
-        <div class="price-card">
-            <h3>Starter</h3>
-            <div class="price">€99+</div>
-            <p>Logo & basis branding</p>
-        </div>
+<div class="price-card">
+<h3>Starter</h3>
+<div class="price">€89+</div>
+<p>Logo & branding basis</p>
+</div>
 
-        <div class="price-card">
-            <h3>Growth</h3>
-            <div class="price">€199+</div>
-            <p>AI video content + strategie</p>
-        </div>
+<div class="price-card">
+<h3>Growth</h3>
+<div class="price">€179+</div>
+<p>AI video content + strategie</p>
+</div>
 
-        <div class="price-card">
-            <h3>Domination</h3>
-            <div class="price">€499+</div>
-            <p>Full brand + content systeem</p>
-        </div>
+<div class="price-card">
+<h3>Domination</h3>
+<div class="price">€399+</div>
+<p>Full brand + content systeem</p>
+</div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- CASES -->
 <section id="creaties" class="reveal">
 
-    <div class="subtitle">🎬 CASES</div>
-    <div class="title">AI content experimenten</div>
+<div class="subtitle">🎬 CASES</div>
+<div class="title">AI content experimenten</div>
 
-    <div class="text">
-        Virale AI video formats getest op maximale aandacht en engagement.
-    </div>
+<div class="text">
+Virale AI video formats getest op maximale aandacht en engagement.
+</div>
 
-    <div class="grid">
+<div class="grid">
 
-        <div class="card"><video src="verward.mp4" controls preload="metadata"></video></div>
-        <div class="card"><video src="skiezo.mp4" controls preload="metadata"></video></div>
-        <div class="card"><video src="teletubbies.mp4" controls preload="metadata"></video></div>
-        <div class="card"><video src="flodders.mp4" controls preload="metadata"></video></div>
+<div class="card"><video src="verward.mp4" muted playsinline loop preload="metadata"></video></div>
+<div class="card"><video src="skiezo.mp4" muted playsinline loop preload="metadata"></video></div>
+<div class="card"><video src="teletubbies.mp4" muted playsinline loop preload="metadata"></video></div>
+<div class="card"><video src="flodders.mp4" muted playsinline loop preload="metadata"></video></div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="reveal">
 
-    <div class="subtitle">❓ FAQ</div>
-    <div class="title">Alles wat je moet weten</div>
+<div class="subtitle">❓ FAQ</div>
+<div class="title">Alles wat je moet weten</div>
 
-    <div class="faq"><strong>Hoe snel zie ik resultaat?</strong><p>Meestal binnen 7–14 dagen eerste groei in views en engagement.</p></div>
+<div class="faq"><strong>Hoe snel zie ik resultaat?</strong><p>Meestal binnen 7–14 dagen eerste groei in views en engagement.</p></div>
 
-    <div class="faq"><strong>Voor wie is dit bedoeld?</strong><p>Voor bedrijven en creators die willen groeien via content en branding.</p></div>
+<div class="faq"><strong>Moet ik al een groot merk hebben?</strong><p>Nee, wij helpen vanaf 0 bouwen.</p></div>
 
-    <div class="faq"><strong>Moet ik al een groot merk hebben?</strong><p>Nee, wij helpen ook vanaf 0 opbouwen naar autoriteit.</p></div>
+<div class="faq"><strong>Wat leveren jullie precies?</strong><p>AI content, branding en growth systemen.</p></div>
 
 </section>
 
 <!-- CONTACT -->
 <section id="contact" class="contact reveal">
 
-    <h2>🚀 Klaar om te domineren?</h2>
+<h2>🚀 Klaar om te domineren?</h2>
 
-    <div class="buttons">
-        <a class="btn btn-primary" href="https://wa.me/31657971118">💬 Start via WhatsApp</a>
-    </div>
+<div class="buttons">
+<a class="btn btn-primary" href="https://wa.me/31657971118">💬 Start via WhatsApp</a>
+</div>
 
 </section>
 
@@ -442,21 +468,22 @@ z-index:999;
 const reveals = document.querySelectorAll(".reveal");
 
 function reveal(){
-    reveals.forEach(el=>{
-        const top = el.getBoundingClientRect().top;
-        if(top < window.innerHeight - 120){
-            el.classList.add("active");
-        }
-    });
+reveals.forEach(el=>{
+const top = el.getBoundingClientRect().top;
+if(top < window.innerHeight - 120){
+el.classList.add("active");
+}
+});
 }
 
 window.addEventListener("scroll", reveal);
 reveal();
 
+/* FAQ */
 document.querySelectorAll(".faq").forEach(faq=>{
-    faq.addEventListener("click", ()=>{
-        faq.classList.toggle("active");
-    });
+faq.addEventListener("click", ()=>{
+faq.classList.toggle("active");
+});
 });
 
 </script>
