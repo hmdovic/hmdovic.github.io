@@ -10,13 +10,8 @@
 
 <style>
 
-/* ================= BASE ================= */
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+/* BASE */
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:'Inter',sans-serif;
@@ -26,7 +21,7 @@ overflow-x:hidden;
 padding-top:140px;
 }
 
-/* GLOW */
+/* glow */
 body::before,
 body::after{
 content:"";
@@ -38,26 +33,21 @@ opacity:.08;
 z-index:-1;
 }
 
-body::before{background:#CCFF00; top:-200px; left:-200px;}
-body::after{background:#7B00FF; bottom:-250px; right:-250px;}
+body::before{background:#CCFF00;top:-200px;left:-200px;}
+body::after{background:#7B00FF;bottom:-250px;right:-250px;}
 
-/* ================= CURSOR ================= */
-
+/* cursor */
 .cursor{
-width:14px;
-height:14px;
-border-radius:50%;
+width:14px;height:14px;border-radius:50%;
 background:#CCFF00;
 position:fixed;
 transform:translate(-50%,-50%);
 pointer-events:none;
 z-index:9999;
 mix-blend-mode:difference;
-box-shadow:0 0 25px rgba(204,255,0,.35);
 }
 
-/* ================= HEADER ================= */
-
+/* HEADER */
 header{
 position:fixed;
 top:0;
@@ -72,14 +62,9 @@ border-bottom:1px solid rgba(255,255,255,.05);
 z-index:999;
 }
 
-.logo{
-height:130px;
-}
+.logo{height:130px;}
 
-nav{
-display:flex;
-gap:25px;
-}
+nav{display:flex;gap:25px;}
 
 nav a{
 color:white;
@@ -89,13 +74,9 @@ font-weight:600;
 transition:.3s;
 }
 
-nav a:hover{
-opacity:1;
-color:#CCFF00;
-}
+nav a:hover{opacity:1;color:#CCFF00;}
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero{
 min-height:85vh;
 display:flex;
@@ -124,8 +105,7 @@ background:linear-gradient(90deg,#CCFF00,#7B00FF);
 -webkit-text-fill-color:transparent;
 }
 
-/* ================= BUTTONS ================= */
-
+/* BUTTONS */
 .buttons{
 display:flex;
 gap:20px;
@@ -157,8 +137,7 @@ border:1px solid rgba(255,255,255,.2);
 color:white;
 }
 
-/* ================= SECTIONS ================= */
-
+/* SECTIONS */
 section{
 padding:140px 8%;
 max-width:1300px;
@@ -176,8 +155,7 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* ================= TEXT ================= */
-
+/* TEXT */
 .subtitle{
 color:#CCFF00;
 font-size:13px;
@@ -198,8 +176,7 @@ margin-top:20px;
 line-height:1.7;
 }
 
-/* ================= STATS ================= */
-
+/* STATS */
 .stats{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -220,8 +197,7 @@ font-size:2rem;
 font-weight:900;
 }
 
-/* ================= PRICING ================= */
-
+/* PRICING */
 .pricing{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -245,13 +221,12 @@ box-shadow:0 40px 100px rgba(204,255,0,.12);
 
 .price{
 color:#CCFF00;
-font-size:2rem;
+font-size:1.8rem;
 font-weight:900;
 margin-top:15px;
 }
 
-/* ================= FAQ ================= */
-
+/* FAQ */
 .faq{
 background:rgba(255,255,255,.03);
 border:1px solid rgba(255,255,255,.05);
@@ -276,8 +251,7 @@ margin-top:10px;
 display:block;
 }
 
-/* ================= PORTFOLIO GRID FIXED ================= */
-
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(4,1fr);
@@ -294,7 +268,6 @@ margin-top:60px;
 }
 
 .card{
-position:relative;
 border-radius:22px;
 overflow:hidden;
 aspect-ratio:9/16;
@@ -309,27 +282,13 @@ object-fit:cover;
 display:block;
 }
 
-/* hover premium */
-.card:hover{
-transform:translateY(-10px);
-border-color:#CCFF00;
-box-shadow:0 30px 80px rgba(204,255,0,.15);
-}
-
-.card:hover video{
-transform:scale(1.05);
-filter:brightness(.75);
-}
-
-/* ================= CONTACT ================= */
-
+/* CONTACT */
 .contact{
 text-align:center;
 padding:150px 8%;
 }
 
-/* ================= WHATSAPP ================= */
-
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 right:30px;
@@ -357,7 +316,6 @@ z-index:999;
     <img src="logo.png" class="logo">
 
     <nav>
-        <a href="#diensten">Diensten</a>
         <a href="#prijzen">Prijzen</a>
         <a href="#creaties">Cases</a>
         <a href="#faq">FAQ</a>
@@ -375,7 +333,7 @@ z-index:999;
     </h1>
 
     <p>
-        AI content systemen & branding die aandacht omzetten in groei, leads en merkdominantie.
+        AI content & branding systemen die aandacht omzetten in groei, leads en merkautoriteit.
     </p>
 
     <div class="buttons">
@@ -393,9 +351,9 @@ z-index:999;
 
     <div class="stats">
 
-        <div class="stat"><h3>15.8M+</h3><p>Views 📈</p></div>
-        <div class="stat"><h3>92K+</h3><p>Leads 💰</p></div>
-        <div class="stat"><h3>+520%</h3><p>Growth 🚀</p></div>
+        <div class="stat"><h3>12.4M+</h3><p>Views 📈</p></div>
+        <div class="stat"><h3>68K+</h3><p>Engagement 💬</p></div>
+        <div class="stat"><h3>+420%</h3><p>Growth 🚀</p></div>
 
     </div>
 
@@ -405,26 +363,26 @@ z-index:999;
 <section id="prijzen" class="reveal">
 
     <div class="subtitle">💰 PRIJZEN</div>
-    <div class="title">Transparant & schaalbaar</div>
+    <div class="title">Toegankelijke pakketten</div>
 
     <div class="pricing">
 
         <div class="price-card">
             <h3>Starter</h3>
-            <div class="price">€150+</div>
-            <p>Logo / branding basis</p>
+            <div class="price">€99+</div>
+            <p>Logo & basis branding</p>
         </div>
 
         <div class="price-card">
             <h3>Growth</h3>
-            <div class="price">€350+</div>
-            <p>Content + AI video’s</p>
+            <div class="price">€199+</div>
+            <p>AI video content + strategie</p>
         </div>
 
         <div class="price-card">
             <h3>Domination</h3>
-            <div class="price">€750+</div>
-            <p>Full brand + content system</p>
+            <div class="price">€499+</div>
+            <p>Full brand + content systeem</p>
         </div>
 
     </div>
@@ -438,7 +396,7 @@ z-index:999;
     <div class="title">AI content experimenten</div>
 
     <div class="text">
-        Virale content tests en AI formats gebouwd voor maximale aandacht en engagement.
+        Virale AI video formats getest op maximale aandacht en engagement.
     </div>
 
     <div class="grid">
@@ -456,11 +414,13 @@ z-index:999;
 <section id="faq" class="reveal">
 
     <div class="subtitle">❓ FAQ</div>
-    <div class="title">Veelgestelde vragen</div>
+    <div class="title">Alles wat je moet weten</div>
 
-    <div class="faq"><strong>Hoe snel resultaat?</strong><p>Meestal binnen 7–14 dagen eerste groei.</p></div>
-    <div class="faq"><strong>Voor wie is dit?</strong><p>Voor merken die willen groeien via content & branding.</p></div>
-    <div class="faq"><strong>Is dit alleen video?</strong><p>Nee, full branding + content systemen.</p></div>
+    <div class="faq"><strong>Hoe snel zie ik resultaat?</strong><p>Meestal binnen 7–14 dagen eerste groei in views en engagement.</p></div>
+
+    <div class="faq"><strong>Voor wie is dit bedoeld?</strong><p>Voor bedrijven en creators die willen groeien via content en branding.</p></div>
+
+    <div class="faq"><strong>Moet ik al een groot merk hebben?</strong><p>Nee, wij helpen ook vanaf 0 opbouwen naar autoriteit.</p></div>
 
 </section>
 
@@ -479,7 +439,6 @@ z-index:999;
 
 <script>
 
-/* REVEAL */
 const reveals = document.querySelectorAll(".reveal");
 
 function reveal(){
@@ -494,7 +453,6 @@ function reveal(){
 window.addEventListener("scroll", reveal);
 reveal();
 
-/* FAQ */
 document.querySelectorAll(".faq").forEach(faq=>{
     faq.addEventListener("click", ()=>{
         faq.classList.toggle("active");
