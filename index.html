@@ -3,184 +3,343 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio</title>
+
+<title>Vormiq | High-End Content, Branding & Digitale Dominantie</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #fff;
-  color: #111;
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
-/* NAVBAR */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 16px 24px;
+body{
+font-family:'Inter',sans-serif;
+background:#050505;
+color:white;
+line-height:1.6;
+overflow-x:hidden;
+padding-top:110px;
 }
 
-/* LOGO GROTER */
-.logo img {
-  height: 60px;
-  width: auto;
+/* BACKGROUND GLOWS */
+body::before{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:#CCFF00;
+filter:blur(220px);
+opacity:.07;
+top:-250px;
+left:-150px;
+pointer-events:none;
+z-index:-1;
 }
 
-/* MENU */
-.nav-links {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+body::after{
+content:"";
+position:fixed;
+width:700px;
+height:700px;
+background:#7B00FF;
+filter:blur(250px);
+opacity:.09;
+right:-250px;
+bottom:-250px;
+pointer-events:none;
+z-index:-1;
 }
 
-.nav-links li a {
-  text-decoration: none;
-  color: #111;
-  font-size: 14px;
+/* HEADER */
+header{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 8%;
+background:rgba(5,5,5,.75);
+backdrop-filter:blur(20px);
+border-bottom:1px solid rgba(255,255,255,.03);
+z-index:999;
 }
 
-/* SECTION */
-#creaties {
-  padding: 60px 24px;
+.logo-wrapper{
+display:flex;
+align-items:center;
+gap:18px;
 }
 
-.section-subtitle {
-  opacity: 0.6;
-  margin-bottom: 8px;
+.logo{
+height:90px;
+width:auto;
+border-radius:12px;
 }
 
-.section-title {
-  font-size: 28px;
-  margin-bottom: 32px;
-  line-height: 1.2;
+/* NAV */
+nav{
+display:flex;
+gap:30px;
+align-items:center;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+font-size:0.95rem;
+opacity:.7;
+transition:.3s;
+}
+
+nav a:hover{
+opacity:1;
+color:#CCFF00;
+}
+
+.cta{
+background:#CCFF00;
+color:black;
+padding:14px 26px;
+border-radius:999px;
+font-weight:800;
+}
+
+/* HERO */
+.hero{
+min-height:85vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:0 8%;
+}
+
+.badge{
+padding:10px 20px;
+border:1px solid rgba(204,255,0,.2);
+background:rgba(204,255,0,.03);
+border-radius:999px;
+font-size:13px;
+font-weight:700;
+color:#CCFF00;
+margin-bottom:30px;
+}
+
+.hero h1{
+font-size:clamp(2.8rem,6.5vw,5.5rem);
+font-weight:900;
+line-height:1.05;
+margin-bottom:25px;
+}
+
+.gradient{
+background:linear-gradient(90deg,#CCFF00,#7B00FF);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+.hero p{
+max-width:800px;
+color:#999;
+font-size:1.3rem;
+margin-bottom:40px;
+}
+
+/* BUTTONS */
+.buttons{
+display:flex;
+gap:20px;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+background:#CCFF00;
+color:black;
+padding:18px 36px;
+border-radius:999px;
+font-weight:800;
+text-decoration:none;
+}
+
+.btn-secondary{
+border:1px solid rgba(255,255,255,.12);
+padding:18px 36px;
+border-radius:999px;
+text-decoration:none;
+color:white;
+}
+
+/* SECTIONS */
+section{
+padding:120px 8%;
+max-width:1300px;
+margin:auto;
+scroll-margin-top:120px;
+}
+
+.section-subtitle{
+color:#CCFF00;
+font-size:13px;
+font-weight:800;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:15px;
+}
+
+.section-title{
+font-size:3rem;
+font-weight:900;
+margin-bottom:20px;
+}
+
+.section-text{
+color:#999;
+font-size:1.2rem;
+max-width:850px;
 }
 
 /* GRID */
-.case-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+.tiktok-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:50px;
 }
 
-/* CARD */
-.case-card {
-  display: flex;
-  flex-direction: column;
+.video-card{
+background:#111;
+border-radius:24px;
+overflow:hidden;
+aspect-ratio:9/16;
+border:1px solid rgba(255,255,255,.04);
+transition:.3s;
 }
 
-.case-media video {
-  width: 100%;
-  display: block;
-  border-radius: 8px;
+.video-card:hover{
+transform:scale(1.03);
+border-color:#CCFF00;
 }
 
-.case-content {
-  padding-top: 10px;
+.video-card video{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.case-content h3 {
-  margin: 0;
-  font-size: 16px;
+/* CONTACT */
+.contact{
+text-align:center;
+background:linear-gradient(180deg,transparent,rgba(204,255,0,0.02));
+padding:120px 8%;
+border-radius:40px;
 }
 
-.case-content p {
-  margin: 4px 0;
-  font-size: 14px;
-  color: #333;
+.whatsapp{
+position:fixed;
+right:30px;
+bottom:30px;
+width:74px;
+height:74px;
+background:#25D366;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:36px;
+box-shadow:0 8px 30px rgba(37,211,102,.5);
 }
 
-.case-meta {
-  font-size: 12px;
-  color: #666;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .section-title {
-    font-size: 22px;
-  }
-
-  .nav-links {
-    gap: 12px;
-  }
-
-  .logo img {
-    height: 48px;
-  }
-}
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-<header class="navbar">
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-  </div>
+<header>
+    <div class="logo-wrapper">
+        <img src="logo.png" class="logo" alt="Vormiq logo">
+    </div>
 
-  <ul class="nav-links">
-    <li><a href="#creaties">Werk</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+    <nav>
+        <a href="#diensten">Diensten</a>
+        <a href="#prijzen">Prijzen</a>
+        <a href="#creaties">Creaties</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact" class="cta">Contact</a>
+    </nav>
 </header>
 
-<!-- PORTFOLIO -->
+<section class="hero">
+    <div class="badge">Aandacht • Autoriteit • Conversie</div>
+
+    <h1>Stop met content maken.<br><span class="gradient">Start met domineren.</span></h1>
+
+    <p>Wij bouwen merken die niet genegeerd kunnen worden.</p>
+
+    <div class="buttons">
+        <a href="https://wa.me/31657971118" class="btn-primary">Start direct</a>
+        <a href="#creaties" class="btn-secondary">Bekijk werk</a>
+    </div>
+</section>
+
 <section id="creaties">
-    <p class="section-subtitle">Werk</p>
-    <h2 class="section-title">Content die aandacht vasthoudt en blijft hangen</h2>
+    <p class="section-subtitle">Portfolio</p>
+    <h2 class="section-title">AI-content & virale experimenten</h2>
 
-    <div class="case-grid">
+    <p class="section-text">
+        Mix van AI satire content en virality tests.
+    </p>
 
-        <div class="case-card">
-            <div class="case-media">
-                <video src="verward.mp4" muted loop playsinline></video>
-            </div>
-            <div class="case-content">
-                <h3>Verward Campaign</h3>
-                <p>Korte video die direct de aandacht grijpt</p>
-                <p class="case-meta">Getest op eerste 3 seconden aandacht en kijkduur</p>
-            </div>
+    <div class="tiktok-grid">
+
+        <div class="video-card">
+            <video controls>
+                <source src="verward.mp4" type="video/mp4">
+            </video>
         </div>
 
-        <div class="case-card">
-            <div class="case-media">
-                <video src="flodders.mp4" muted loop playsinline></video>
-            </div>
-            <div class="case-content">
-                <h3>Flodders Style Edit</h3>
-                <p>Humor-based edit met focus op bereik</p>
-                <p class="case-meta">Gemaakt om snel gedeeld te worden</p>
-            </div>
+        <div class="video-card">
+            <video controls>
+                <source src="skiezo.mp4" type="video/mp4">
+            </video>
         </div>
 
-        <div class="case-card">
-            <div class="case-media">
-                <video src="skiezo.mp4" muted loop playsinline></video>
-            </div>
-            <div class="case-content">
-                <h3>Skiezo Concept</h3>
-                <p>Experiment met nieuwe visuele stijl</p>
-                <p class="case-meta">Test voor merkgevoel en herkenning</p>
-            </div>
+        <div class="video-card">
+            <video controls>
+                <source src="teletubbies.mp4" type="video/mp4">
+            </video>
         </div>
 
-        <div class="case-card">
-            <div class="case-media">
-                <video src="teletubbies.mp4" muted loop playsinline></video>
-            </div>
-            <div class="case-content">
-                <h3>Teletubbies Remix</h3>
-                <p>Nostalgie gebruikt als aandachtshook</p>
-                <p class="case-meta">Emotie gestuurd kijkgedrag</p>
-            </div>
+        <div class="video-card">
+            <video controls>
+                <source src="flodders.mp4" type="video/mp4">
+            </video>
         </div>
 
     </div>
 </section>
+
+<section class="contact" id="contact">
+    <h2>Klaar om te groeien?</h2>
+    <p>Laat je merk niet ondersneeuwen.</p>
+
+    <a href="https://wa.me/31657971118" class="btn-primary">Start nu</a>
+</section>
+
+<footer style="text-align:center;padding:60px;color:#555;">
+© 2026 Vormiq
+</footer>
+
+<a href="https://wa.me/31657971118" class="whatsapp">💬</a>
 
 </body>
 </html>
