@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vormiq | High-End Content, Branding & Digitale Dominantie</title>
+<title>Vormiq | Branding & Content die klanten oplevert</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET & BASIS STYLE */
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -24,10 +24,10 @@ background:#050505;
 color:white;
 line-height:1.6;
 overflow-x:hidden;
-padding-top:110px;
+padding-top:120px;
 }
 
-/* PREMIUM BACKGROUND GLOWS */
+/* BACKGROUND */
 body::before{
 content:"";
 position:fixed;
@@ -35,11 +35,10 @@ width:700px;
 height:700px;
 background:#CCFF00;
 filter:blur(220px);
-opacity:.07;
+opacity:.06;
 top:-250px;
 left:-150px;
-pointer-events:none;
-z-index: -1;
+z-index:-1;
 }
 
 body::after{
@@ -49,14 +48,13 @@ width:700px;
 height:700px;
 background:#7B00FF;
 filter:blur(250px);
-opacity:.09;
+opacity:.08;
 right:-250px;
 bottom:-250px;
-pointer-events:none;
-z-index: -1;
+z-index:-1;
 }
 
-/* HEADER - DOMINANT & LUXE */
+/* HEADER */
 header{
 position:fixed;
 top:0;
@@ -64,13 +62,14 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 8%;
+padding:18px 8%;
 background:rgba(5,5,5,.75);
 backdrop-filter:blur(20px);
-border-bottom:1px solid rgba(255,255,255,.03);
+border-bottom:1px solid rgba(255,255,255,.05);
 z-index:999;
 }
 
+/* LOGO GROTER (FIX) */
 .logo-wrapper{
 display:flex;
 align-items:center;
@@ -78,25 +77,23 @@ gap:18px;
 }
 
 .logo{
-height:65px;
+height:85px;
 width:auto;
-border-radius:10px;
 }
 
 .logo-text{
-font-size:2rem;
+font-size:1.8rem;
 font-weight:900;
 letter-spacing:-1.5px;
-text-transform:uppercase;
 background:linear-gradient(90deg,#fff,#888);
 -webkit-background-clip:text;
 -webkit-text-fill-color:transparent;
 }
 
-/* NAVIGATION */
+/* NAV */
 nav{
 display:flex;
-gap:30px;
+gap:28px;
 align-items:center;
 }
 
@@ -117,19 +114,12 @@ color:#CCFF00;
 .cta{
 background:#CCFF00;
 color:black;
-padding:14px 26px;
+padding:12px 24px;
 border-radius:999px;
 font-weight:800;
-letter-spacing:-0.3px;
-box-shadow: 0 4px 20px rgba(204,255,0,0.15);
 }
 
-.cta:hover{
-transform: translateY(-2px);
-box-shadow: 0 6px 25px rgba(204,255,0,0.3);
-}
-
-/* HERO SECTION */
+/* HERO */
 .hero{
 min-height:85vh;
 display:flex;
@@ -140,25 +130,12 @@ text-align:center;
 padding:0 8%;
 }
 
-.badge{
-padding:10px 20px;
-border:1px solid rgba(204,255,0,.2);
-background: rgba(204,255,0,.03);
-border-radius:999px;
-font-size:13px;
-font-weight:700;
-letter-spacing:1px;
-color:#CCFF00;
-text-transform:uppercase;
-margin-bottom:30px;
-}
-
 .hero h1{
-font-size:clamp(2.8rem,6.5vw,5.5rem);
-line-height:1.05;
+font-size:clamp(2.8rem,6vw,5.2rem);
 font-weight:900;
+line-height:1.05;
+letter-spacing:-2px;
 margin-bottom:25px;
-letter-spacing:-3px;
 }
 
 .gradient{
@@ -168,38 +145,33 @@ background:linear-gradient(90deg,#CCFF00,#7B00FF);
 }
 
 .hero p{
-max-width:800px;
-color:#999;
-font-size:1.3rem;
-font-weight:400;
-margin-bottom:40px;
-line-height:1.6;
+max-width:780px;
+color:#aaa;
+font-size:1.2rem;
+margin-bottom:35px;
 }
 
-/* SOCIAL PROOF BANNER */
-.social-proof{
-border:1px solid rgba(255,255,255,.05);
-background:rgba(255,255,255,.02);
-padding:14px 30px;
-border-radius:50px;
-font-weight:700;
-font-size:1.1rem;
-color:#fff;
+/* TRUST BAR */
+.trust{
 display:inline-flex;
-align-items:center;
-gap:10px;
-margin-bottom:45px;
-box-shadow: inset 0 1px 1px rgba(255,255,255,0.05);
+gap:12px;
+padding:12px 22px;
+border:1px solid rgba(255,255,255,.06);
+border-radius:50px;
+background:rgba(255,255,255,.02);
+margin-bottom:35px;
+font-weight:600;
+color:#fff;
 }
 
-.social-proof span {
-color: #CCFF00;
+.trust span{
+color:#CCFF00;
 }
 
 /* BUTTONS */
 .buttons{
 display:flex;
-gap:20px;
+gap:18px;
 flex-wrap:wrap;
 justify-content:center;
 }
@@ -207,225 +179,169 @@ justify-content:center;
 .btn-primary{
 background:#CCFF00;
 color:black;
-padding:18px 36px;
+padding:16px 34px;
 border-radius:999px;
 font-weight:800;
-font-size:1.1rem;
 text-decoration:none;
 transition:.3s;
-box-shadow: 0 4px 20px rgba(204,255,0,0.15);
 }
 
 .btn-primary:hover{
-transform:translateY(-4px);
-box-shadow:0 10px 35px rgba(204,255,0,.35);
+transform:translateY(-3px);
 }
 
 .btn-secondary{
-border:1px solid rgba(255,255,255,.12);
-background: rgba(255,255,255,.02);
-padding:18px 36px;
+border:1px solid rgba(255,255,255,.15);
+padding:16px 34px;
 border-radius:999px;
-font-weight:600;
-font-size:1.1rem;
 text-decoration:none;
 color:white;
-transition: .3s;
 }
 
-.btn-secondary:hover{
-background: rgba(255,255,255,.07);
-border-color: rgba(255,255,255,.25);
-}
-
-/* SECTIONS BRUTAL MARKETING TEXT */
+/* SECTIONS */
 section{
 padding:120px 8%;
 max-width:1300px;
 margin:auto;
-scroll-margin-top:120px;
 }
 
+/* TITLES */
 .section-subtitle{
 color:#CCFF00;
-font-size:13px;
 font-weight:800;
 letter-spacing:3px;
-text-transform:uppercase;
+font-size:12px;
 margin-bottom:15px;
+text-transform:uppercase;
 }
 
 .section-title{
-font-size:3.2rem;
+font-size:3rem;
 font-weight:900;
 margin-bottom:20px;
-line-height:1.15;
-letter-spacing:-1.5px;
 }
 
+/* TEXT */
 .section-text{
-color:#999;
-font-size:1.25rem;
+color:#aaa;
+font-size:1.2rem;
 max-width:850px;
-line-height:1.7;
 }
 
-/* LUXURY GRID SYSTEM */
+/* GRID */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:50px;
-}
-
-/* LUXE SERVICE & PRICE CARDS */
-.card{
-background:rgba(15,15,15,0.6);
-padding:40px;
-border-radius:24px;
-border:1px solid rgba(255,255,255,.04);
-backdrop-filter: blur(10px);
-transition:.4s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:rgba(204,255,0,0.4);
-background:rgba(20,20,20,0.8);
-box-shadow: 0 15px 30px rgba(0,0,0,0.4);
-}
-
-.card h3{
-font-size:1.6rem;
-font-weight:800;
-margin-bottom:15px;
-letter-spacing: -0.5px;
-}
-
-.card p{
-color:#888;
-font-size:1.05rem;
-}
-
-/* PRICE TAGS */
-.price{
-color:#CCFF00;
-font-size:2rem;
-font-weight:900;
-margin-top:20px;
-letter-spacing: -1px;
-}
-
-/* PORTFOLIO TIKTOK GRID - AS-PECT RATIO EDITORIAL */
-.tiktok-grid {
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:25px;
 margin-top:50px;
 }
 
-.video-card {
-background: #111;
-border-radius: 24px;
-overflow: hidden;
-border: 1px solid rgba(255,255,255,.04);
-aspect-ratio: 9/16;
-transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.video-card:hover {
-transform: scale(1.03) translateY(-5px);
-border-color: #CCFF00;
-box-shadow: 0 20px 40px rgba(204, 255, 0, 0.15);
-}
-
-/* FAQ ACCORDION LOOK */
-.faq{
+/* CARDS */
+.card{
 background:rgba(15,15,15,0.6);
-padding:30px;
-border-radius:20px;
-margin-bottom:15px;
-border:1px solid rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.05);
+padding:35px;
+border-radius:22px;
+transition:.3s;
 }
 
-.faq strong{
-font-size:1.2rem;
-font-weight:700;
-display:block;
+.card:hover{
+transform:translateY(-8px);
+border-color:#CCFF00;
+}
+
+.card h3{
+font-size:1.4rem;
 margin-bottom:10px;
-color:#fff;
 }
 
-.faq p{
+.card p{
+color:#999;
+}
+
+/* CASE GRID */
+.case-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:50px;
+}
+
+.case-card{
+background:rgba(15,15,15,0.6);
+border-radius:24px;
+overflow:hidden;
+border:1px solid rgba(255,255,255,.05);
+transition:.4s;
+}
+
+.case-card:hover{
+transform:translateY(-10px);
+border-color:#CCFF00;
+}
+
+.case-media{
+height:420px;
+background:black;
+}
+
+.case-media video{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.case-content{
+padding:18px;
+}
+
+.case-content h3{
+font-weight:800;
+margin-bottom:6px;
+}
+
+.case-content p{
+color:#CCFF00;
+font-weight:700;
+margin-bottom:5px;
+}
+
+.case-content span{
 color:#888;
-font-size:1.05rem;
+font-size:0.9rem;
 }
 
-/* CONTACT SECTION */
+/* CONTACT */
 .contact{
 text-align:center;
-background: linear-gradient(180deg, transparent, rgba(204,255,0,0.02));
-border-radius:40px;
-padding:120px 8%;
+padding:140px 8%;
 }
 
 .contact h2{
-font-size:3.5rem;
+font-size:3.2rem;
 font-weight:900;
-letter-spacing:-2px;
-margin-bottom:20px;
 }
 
 .contact p{
-color:#999;
-font-size:1.3rem;
+color:#aaa;
+margin:20px auto 40px;
 max-width:700px;
-margin:auto;
-margin-bottom:40px;
 }
 
-/* FLOATING WHATSAPP INTERACTIVE BUTTON */
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
-right:30px;
 bottom:30px;
-width:74px;
-height:74px;
+right:30px;
+width:70px;
+height:70px;
 background:#25D366;
 border-radius:50%;
 display:flex;
-justify-content:center;
 align-items:center;
-font-size:36px;
-box-shadow:0 8px 30px rgba(37,211,102,.5);
-animation:pulse 2.5s infinite;
-text-decoration:none;
-z-index:999;
-transition: .3s;
-}
-
-.whatsapp:hover {
-transform: scale(1.1);
-box-shadow:0 12px 35px rgba(37,211,102,.7);
-}
-
-@keyframes pulse{
-0% {box-shadow: 0 0 0 0 rgba(37,211,102, 0.7);}
-70% {box-shadow: 0 0 0 20px rgba(37,211,102, 0);}
-100% {box-shadow: 0 0 0 0 rgba(37,211,102, 0);}
-}
-
-/* PRECISE RESPONSIVENESS */
-@media(max-width:950px){
-nav a:not(.cta){display:none;}
-header {padding: 20px 5%;}
-body {padding-top:100px;}
-.hero h1{font-size:3.2rem; letter-spacing: -1.5px;}
-.section-title{font-size:2.4rem;}
-.contact h2{font-size:2.6rem;}
-.logo {height: 50px;}
-.logo-text {font-size: 1.6rem;}
+justify-content:center;
+font-size:32px;
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
 </style>
@@ -433,7 +349,6 @@ body {padding-top:100px;}
 
 <body>
 
-<!-- LUXE LOGO & NAV HEADER -->
 <header>
     <div class="logo-wrapper">
         <img src="logo.png" class="logo" alt="Vormiq logo">
@@ -442,69 +357,113 @@ body {padding-top:100px;}
 
     <nav>
         <a href="#diensten">Diensten</a>
-        <a href="#prijzen">Prijzen</a>
-        <a href="#creaties">Creaties</a>
-        <a href="#faq">FAQ</a>
+        <a href="#creaties">Cases</a>
         <a href="#contact" class="cta">Contact</a>
     </nav>
 </header>
 
-<!-- PSYCHOLOGISCHE HERO SECTION -->
 <section class="hero">
 
-    <div class="badge">Aandacht • Autoriteit • Conversie</div>
+    <div class="trust">
+        <span>5.4M+</span> views gegenereerd • content die aandacht wint
+    </div>
 
     <h1>
-        Stop met content maken.
-        <br>
-        <span class="gradient">Start met domineren.</span>
+        Je bedrijf is niet het probleem.<br>
+        <span class="gradient">Je zichtbaarheid wel.</span>
     </h1>
 
     <p>
-        De meeste bedrijven verliezen geen klanten door hun kwaliteit, maar door hun onzichtbaarheid. Wij transformeren jouw online aanwezigheid in een onweerstaanbare magneet voor jouw ideale doelgroep.
+        Wij bouwen content en branding die ervoor zorgt dat klanten je serieus nemen nog vóór ze contact opnemen.
     </p>
-
-    <div class="social-proof">
-        🔥 Meer dan <span>5.400.000+ weergaven</span> gegenereerd
-    </div>
 
     <div class="buttons">
-        <a href="https://wa.me/31657971118?text=Hey%20Vormiq,%20ik%20wil%20mijn%20merk%20opschalen" class="btn-primary">
-            Start direct op WhatsApp
-        </a>
-        <a href="#creaties" class="btn-secondary">
-            Bekijk bewezen werk
-        </a>
+        <a href="#contact" class="btn-primary">Start gesprek</a>
+        <a href="#creaties" class="btn-secondary">Bekijk cases</a>
     </div>
 
 </section>
 
-<!-- HET PROBLEEM SECTION -->
-<section style="background: rgba(255,255,255,0.01); border-radius: 32px; border: 1px solid rgba(255,255,255,0.02);">
-    <p class="section-subtitle">De harde realiteit</p>
-    <h2 class="section-title">Waarom potentiële klanten nu nog aan je voorbijgaan</h2>
-    <p class="section-text">
-        Je kunt de allerbeste zijn in wat je doet, maar als je online uitstraling dat niet binnen 3 seconden bewijst, ben je onzichtbaar. Consumenten kiezen niet voor de beste optie; ze kiezen voor het merk dat het meest betrouwbaar en professioneel communiceert. Wij zorgen dat jij dat merk bent.
-    </p>
+<section id="diensten">
+    <p class="section-subtitle">Diensten</p>
+    <h2 class="section-title">Wat we bouwen</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Branding</h3>
+            <p>Een uitstraling die vertrouwen wekt zonder uitleg nodig te hebben.</p>
+        </div>
+
+        <div class="card">
+            <h3>Short-form content</h3>
+            <p>Video’s die scrollen stoppen en aandacht vasthouden.</p>
+        </div>
+
+        <div class="card">
+            <h3>Websites</h3>
+            <p>Sites die niet alleen mooi zijn, maar ook overtuigen.</p>
+        </div>
+
+    </div>
 </section>
 
-<!-- DIENSTEN SECTION -->
-<section id="diensten">
-    <p class="section-subtitle">Onze expertise</p>
-    <h2 class="section-title">Strategische oplossingen voor groei</h2>
-    
-    <div class="grid">
-        <div class="card">
-            <h3>High-Retention Video’s</h3>
-            <p>Korte, krachtige videocontent die de aandacht grijpt, vasthoudt en kijkers direct omzet in betalende leads.</p>
+<section id="creaties">
+    <p class="section-subtitle">Cases</p>
+    <h2 class="section-title">Echte content. Echte aandacht.</h2>
+
+    <div class="case-grid">
+
+        <div class="case-card">
+            <div class="case-media"><video src="verward.mp4" muted loop autoplay></video></div>
+            <div class="case-content">
+                <h3>Verward</h3>
+                <p>High-retention hook</p>
+                <span>Aandacht test • virale structuur</span>
+            </div>
         </div>
-        <div class="card">
-            <h3>Social Media Dominantie</h3>
-            <p>Geen willekeurige posts, maar een doordachte content-machine die organisch bereik en autoriteit bouwt.</p>
+
+        <div class="case-card">
+            <div class="case-media"><video src="flodders.mp4" muted loop autoplay></video></div>
+            <div class="case-content">
+                <h3>Flodders</h3>
+                <p>Entertainment format</p>
+                <span>Humor + bereik</span>
+            </div>
         </div>
-        <div class="card">
-            <h3>Premium Branding</h3>
-            <p>Een ijzersterke visuele identiteit vanaf seconde één, waarmee je direct hogere prijzen kunt verantwoorden.</p>
+
+        <div class="case-card">
+            <div class="case-media"><video src="skiezo.mp4" muted loop autoplay></video></div>
+            <div class="case-content">
+                <h3>Skiezo</h3>
+                <p>Concept content</p>
+                <span>Creatieve test</span>
+            </div>
+        </div>
+
+        <div class="case-card">
+            <div class="case-media"><video src="teletubbies.mp4" muted loop autoplay></video></div>
+            <div class="case-content">
+                <h3>Teletubbies</h3>
+                <p>Nostalgie hook</p>
+                <span>Emotionele trigger</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2>Wil je dat mensen je serieus nemen?</h2>
+    <p>Dan moet je online uitstraling dat eerst bewijzen.</p>
+
+    <a href="https://wa.me/31657971118" class="btn-primary">Start via WhatsApp</a>
+</section>
+
+<a class="whatsapp" href="https://wa.me/31657971118">💬</a>
+
+</body>
+</html>erantwoorden.</p>
         </div>
         <div class="card">
             <h3>Conversie Websites</h3>
