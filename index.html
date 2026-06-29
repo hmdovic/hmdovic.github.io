@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vormiq</title>
+
+<title>Vormiq | Short-form content & branding</title>
+<meta name="description" content="Vormiq maakt short-form video, branding en creatieve content voor merken die aandacht willen winnen en online zichtbaar willen worden.">
+<meta name="keywords" content="content creation, short form video, branding, social media marketing, video editing, virale content">
+<meta name="author" content="Vormiq">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Vormiq | Creative Studio">
+<meta property="og:description" content="Short-form content, satire en branding die aandacht pakt.">
+<meta property="og:type" content="website">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
 /* BASE */
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
+*{margin:0;padding:0;box-sizing:border-box;}
 body{
 background:#050505;
 color:white;
-font-family:Inter, sans-serif;
+font-family:Inter,sans-serif;
 overflow-x:hidden;
 }
 
@@ -29,14 +36,13 @@ width:100%;
 display:flex;
 align-items:center;
 justify-content:space-between;
-padding:18px 6%;
+padding:16px 6%;
 background:rgba(5,5,5,0.75);
 backdrop-filter:blur(18px);
 border-bottom:1px solid rgba(255,255,255,0.05);
 z-index:999;
 }
 
-/* LOGO */
 .logo-wrapper{
 display:flex;
 flex-direction:column;
@@ -45,8 +51,7 @@ gap:2px;
 }
 
 .logo{
-height:68px;
-width:auto;
+height:70px;
 }
 
 .logo-sub{
@@ -58,13 +63,13 @@ text-transform:uppercase;
 
 /* HERO */
 .hero{
-min-height:70vh;
+min-height:65vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:130px 6% 60px;
+padding:140px 6% 40px;
 }
 
 .hero h1{
@@ -85,10 +90,10 @@ font-size:1.05rem;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
 gap:18px;
-padding:60px 6%;
+padding:50px 6%;
 }
 
-/* VIDEO CARD */
+/* CARD */
 .card{
 position:relative;
 border-radius:18px;
@@ -133,35 +138,20 @@ top:20px;
 right:25px;
 font-size:2.5rem;
 cursor:pointer;
-color:white;
 }
 
-/* MOBILE */
+/* ===================== */
+/* MOBILE OPTIMISATION   */
+/* ===================== */
 @media (max-width:768px){
 
-header{
-padding:14px 5%;
-}
+header{padding:14px 5%;}
+.logo{height:58px;}
+.logo-sub{font-size:0.65rem;}
 
-.logo{
-height:58px;
-}
-
-.logo-sub{
-font-size:0.65rem;
-}
-
-.hero{
-padding:140px 5% 50px;
-}
-
-.hero h1{
-font-size:2.1rem;
-}
-
-.hero p{
-font-size:1rem;
-}
+.hero{padding:140px 5% 50px;}
+.hero h1{font-size:2.1rem;}
+.hero p{font-size:1rem;}
 
 .grid{
 grid-template-columns:1fr;
@@ -170,7 +160,7 @@ padding:40px 5%;
 }
 
 .card video{
-height:70vh;
+height:72vh;
 }
 
 .modal video{
@@ -181,24 +171,50 @@ width:95%;
 top:15px;
 right:15px;
 }
+}
 
+/* smooth glow */
+.card::after{
+content:"";
+position:absolute;
+inset:0;
+background:radial-gradient(circle at center, rgba(204,255,0,0.08), transparent 60%);
+opacity:0;
+transition:0.3s;
+pointer-events:none;
+}
+
+.card:hover::after{
+opacity:1;
 }
 
 </style>
+
+<!-- SEO STRUCTURED DATA -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vormiq",
+  "description": "Creative studio for short-form content, branding and viral video production.",
+  "url": "https://vormiq.com"
+}
+</script>
+
 </head>
 
 <body>
 
 <header>
     <div class="logo-wrapper">
-        <img src="logo.png" class="logo">
+        <img src="logo.png" class="logo" alt="Vormiq logo">
         <div class="logo-sub">Creative Studio</div>
     </div>
 </header>
 
 <section class="hero">
-    <h1>Creatieve content die aandacht pakt.</h1>
-    <p>Satire, experimenten en short-form visuals ontworpen voor bereik en impact.</p>
+    <h1>Content die aandacht vasthoudt.</h1>
+    <p>Short-form video, satire en experimenten gemaakt om bekeken te worden.</p>
 </section>
 
 <section class="grid">
@@ -221,7 +237,7 @@ right:15px;
 
 </section>
 
-<!-- FULLSCREEN MODAL -->
+<!-- FULLSCREEN PLAYER -->
 <div class="modal" id="modal">
     <div class="close" onclick="closeVideo()">×</div>
     <video id="modalVideo" controls autoplay></video>
@@ -229,6 +245,7 @@ right:15px;
 
 <script>
 
+/* OPEN FULLSCREEN */
 function openVideo(src){
     const modal = document.getElementById('modal');
     const video = document.getElementById('modalVideo');
@@ -236,8 +253,10 @@ function openVideo(src){
     modal.style.display = 'flex';
     video.src = src;
     video.muted = false;
+    video.play();
 }
 
+/* CLOSE */
 function closeVideo(){
     const modal = document.getElementById('modal');
     const video = document.getElementById('modalVideo');
@@ -247,21 +266,22 @@ function closeVideo(){
     video.src = "";
 }
 
+/* PAUSE WHEN NOT VISIBLE (performance upgrade) */
+const videos = document.querySelectorAll("video");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.play();
+        } else {
+            entry.target.pause();
+        }
+    });
+}, { threshold: 0.6 });
+
+videos.forEach(v => observer.observe(v));
+
 </script>
-
-</body>
-</html>met%20opschalen" class="btn-primary">
-        Start nu jouw groeitraject
-    </a>
-</section>
-
-<!-- FOOTER -->
-<footer style="text-align:center; padding:60px 20px; color:#555; border-top: 1px solid rgba(255,255,255,0.02); font-size: 0.9rem;">
-    &copy; 2026 Vormiq — Vorm. Groei. Resultaat. | Alle rechten voorbehouden.
-</footer>
-
-<!-- FLOATING WHATSAPP ICON -->
-<a href="https://wa.me/31657971118" class="whatsapp" aria-label="Contact ons via WhatsApp">💬</a>
 
 </body>
 </html>
