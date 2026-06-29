@@ -4,17 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vormiq | Video, Branding & Groei voor bedrijven</title>
-
-<meta name="description" content="Meer aandacht, meer vertrouwen en meer klanten met video, branding, websites en content van Vormiq.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<title>Vormiq | Video, Branding & Groei</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
+/* RESET */
 *{
 margin:0;
 padding:0;
@@ -24,26 +20,22 @@ scroll-behavior:smooth;
 
 body{
 font-family:'Inter',sans-serif;
-background:#080808;
+background:#070707;
 color:white;
+line-height:1.6;
 overflow-x:hidden;
-line-height:1.7;
-}
-
-/* FIX: header overlap */
-body{
 padding-top:90px;
 }
 
-/* glow */
+/* BACKGROUND GLOW */
 body::before{
 content:"";
 position:fixed;
 width:600px;
 height:600px;
 background:#B8FF00;
-filter:blur(220px);
-opacity:.07;
+filter:blur(200px);
+opacity:.08;
 top:-200px;
 left:-150px;
 pointer-events:none;
@@ -55,45 +47,62 @@ position:fixed;
 width:600px;
 height:600px;
 background:#7B00FF;
-filter:blur(250px);
+filter:blur(220px);
 opacity:.10;
 right:-200px;
 bottom:-250px;
 pointer-events:none;
 }
 
+/* HEADER */
 header{
 position:fixed;
 top:0;
 width:100%;
-padding:18px 8%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(8,8,8,.75);
-backdrop-filter:blur(20px);
+padding:18px 8%;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(18px);
 border-bottom:1px solid rgba(255,255,255,.05);
 z-index:999;
 }
 
-.logo{
-height:55px;
+.logo-wrapper{
+display:flex;
+flex-direction:column;
 }
 
+.logo{
+height:52px;
+}
+
+.logo-text{
+font-size:11px;
+letter-spacing:3px;
+opacity:.5;
+margin-top:3px;
+text-transform:uppercase;
+}
+
+/* NAV */
 nav{
 display:flex;
-gap:25px;
+gap:22px;
 align-items:center;
 }
 
 nav a{
-text-decoration:none;
 color:white;
+text-decoration:none;
 font-weight:500;
+opacity:.8;
 transition:.3s;
 }
 
 nav a:hover{
+opacity:1;
 color:#B8FF00;
 }
 
@@ -103,9 +112,9 @@ color:black;
 padding:12px 22px;
 border-radius:999px;
 font-weight:700;
-text-decoration:none;
 }
 
+/* HERO */
 .hero{
 min-height:90vh;
 display:flex;
@@ -117,19 +126,19 @@ padding:0 10%;
 }
 
 .badge{
-padding:10px 18px;
+padding:8px 16px;
 border:1px solid rgba(255,255,255,.08);
-background:rgba(255,255,255,.03);
 border-radius:999px;
-margin-bottom:25px;
-font-size:14px;
+font-size:13px;
+opacity:.8;
+margin-bottom:20px;
 }
 
 .hero h1{
-font-size:clamp(2.6rem,7vw,6rem);
+font-size:clamp(2.6rem,6vw,5.8rem);
 line-height:1.05;
 font-weight:900;
-margin-bottom:25px;
+margin-bottom:20px;
 }
 
 .gradient{
@@ -140,11 +149,12 @@ background:linear-gradient(90deg,#B8FF00,#7B00FF);
 
 .hero p{
 max-width:850px;
-font-size:1.15rem;
-color:#BEBEBE;
-margin-bottom:35px;
+color:#bdbdbd;
+font-size:1.1rem;
+margin-bottom:30px;
 }
 
+/* BUTTONS */
 .buttons{
 display:flex;
 gap:15px;
@@ -155,7 +165,7 @@ justify-content:center;
 .btn-primary{
 background:#B8FF00;
 color:black;
-padding:16px 30px;
+padding:16px 28px;
 border-radius:999px;
 font-weight:800;
 text-decoration:none;
@@ -169,43 +179,54 @@ box-shadow:0 0 30px rgba(184,255,0,.35);
 
 .btn-secondary{
 border:1px solid rgba(255,255,255,.15);
-padding:16px 30px;
+padding:16px 28px;
 border-radius:999px;
 text-decoration:none;
 color:white;
-font-weight:600;
 }
 
+/* SECTIONS */
 section{
 padding:100px 8%;
-max-width:1400px;
+max-width:1200px;
 margin:auto;
 scroll-margin-top:100px;
 }
 
+.section-subtitle{
+color:#B8FF00;
+font-size:12px;
+letter-spacing:3px;
+text-transform:uppercase;
+margin-bottom:10px;
+opacity:.8;
+}
+
 .section-title{
 font-size:2.6rem;
-margin-bottom:20px;
+font-weight:800;
+margin-bottom:15px;
 line-height:1.2;
 }
 
 .section-text{
-color:#BEBEBE;
-max-width:900px;
-font-size:1.05rem;
+color:#bdbdbd;
+max-width:800px;
 }
 
+/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:22px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 margin-top:40px;
 }
 
+/* CARD */
 .card{
 background:#111;
-padding:30px;
-border-radius:24px;
+padding:28px;
+border-radius:20px;
 border:1px solid rgba(255,255,255,.05);
 transition:.3s;
 }
@@ -216,39 +237,30 @@ border-color:#B8FF00;
 }
 
 .card h3{
-margin-bottom:12px;
-font-size:1.2rem;
+margin-bottom:10px;
 }
 
 .card p{
-color:#BEBEBE;
+color:#bdbdbd;
 }
 
+/* PRICE */
 .price{
-font-size:1.8rem;
-font-weight:800;
 color:#B8FF00;
-margin-top:12px;
+font-size:1.7rem;
+font-weight:800;
+margin-top:10px;
 }
 
-.placeholder{
-height:220px;
-display:flex;
-justify-content:center;
-align-items:center;
-border-radius:24px;
-background:#111;
-border:2px dashed rgba(255,255,255,.08);
-color:#666;
-}
-
+/* FAQ */
 .faq{
 background:#111;
-padding:25px;
-border-radius:20px;
-margin-bottom:15px;
+padding:22px;
+border-radius:18px;
+margin-bottom:12px;
 }
 
+/* CONTACT */
 .contact{
 text-align:center;
 }
@@ -259,55 +271,41 @@ margin-bottom:15px;
 }
 
 .contact p{
+color:#bdbdbd;
 max-width:700px;
 margin:auto;
-color:#BEBEBE;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
-footer{
-padding:50px;
-text-align:center;
-color:#777;
-}
-
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 right:20px;
 bottom:20px;
-width:80px;
-height:80px;
-border-radius:50%;
+width:78px;
+height:78px;
 background:#25D366;
+border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:38px;
-text-decoration:none;
+font-size:34px;
 box-shadow:0 0 30px rgba(37,211,102,.7);
-z-index:999;
 animation:pulse 2s infinite;
+text-decoration:none;
+z-index:999;
 }
 
 @keyframes pulse{
 50%{transform:scale(1.08);}
 }
 
-/* mobile */
+/* MOBILE */
 @media(max-width:900px){
+nav a:not(.cta){display:none;}
 
-nav a:not(.cta){
-display:none;
-}
-
-.hero h1{
-font-size:2.6rem;
-}
-
-.section-title{
-font-size:2rem;
-}
-
+.hero h1{font-size:2.4rem;}
+.section-title{font-size:2rem;}
 }
 
 </style>
@@ -317,12 +315,15 @@ font-size:2rem;
 
 <header>
 
+<div class="logo-wrapper">
 <img src="logo.png" class="logo" alt="Vormiq logo">
+<span class="logo-text">Vormiq</span>
+</div>
 
 <nav>
 <a href="#diensten">Diensten</a>
 <a href="#prijzen">Prijzen</a>
-<a href="#creaties">Cases</a>
+<a href="#creaties">Creaties</a>
 <a href="#faq">FAQ</a>
 <a href="#contact" class="cta">Contact</a>
 </nav>
@@ -331,25 +332,24 @@ font-size:2rem;
 
 <section class="hero">
 
-<div class="badge">
-⚡ Video • Branding • Websites • Groei
-</div>
+<div class="badge">Video • Branding • Websites • Groei</div>
 
 <h1>
-Je bedrijf verdient meer aandacht<br>
-<span class="gradient">dan het nu krijgt.</span>
+Je bedrijf is beter dan wat mensen nu zien.
+<br>
+<span class="gradient">Wij zorgen dat dat verandert.</span>
 </h1>
 
 <p>
-De meeste bedrijven zijn goed in wat ze doen, maar worden niet gekozen omdat ze niet sterk genoeg overkomen online.
+De meeste bedrijven verliezen klanten niet door kwaliteit, maar door uitstraling, vertrouwen en zichtbaarheid.
 
-Wij zorgen dat je wél opvalt, vertrouwen wekt en klanten aantrekt.
+Wij maken van je merk iets dat wél blijft hangen.
 </p>
 
 <div class="buttons">
 
-<a href="https://wa.me/31657971118?text=Hey%20Vormiq,%20ik%20wil%20graag%20meer%20informatie" class="btn-primary">
-💬 Gratis kennismaking
+<a href="https://wa.me/31657971118?text=Hey%20Vormiq,%20ik%20wil%20meer%20informatie" class="btn-primary">
+Start gratis gesprek
 </a>
 
 <a href="#creaties" class="btn-secondary">
@@ -362,53 +362,40 @@ Bekijk werk
 
 <section>
 
-<h2 class="section-title">Het probleem is niet kwaliteit.</h2>
-<h2 class="section-title gradient">Het is zichtbaarheid.</h2>
+<p class="section-subtitle">Probleem</p>
+<h2 class="section-title">Waarom klanten je nog niet kiezen</h2>
 
 <p class="section-text">
-Je kunt beter zijn dan je concurrent.
-
-Maar als dat niet direct duidelijk is, kiest de markt iemand anders.
-
-Daar lossen wij voor je op.
+Je kunt goed zijn in wat je doet, maar als dat niet binnen 3 seconden duidelijk is online, verlies je klanten aan iemand die dat beter communiceert.
 </p>
 
 </section>
 
 <section id="diensten">
 
-<h2 class="section-title">Wat wij doen</h2>
+<p class="section-subtitle">Wat we doen</p>
+<h2 class="section-title">Diensten</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>🎬 Video’s die converteren</h3>
-<p>Professionele promo’s die vertrouwen en actie creëren.</p>
+<h3>Video’s die verkopen</h3>
+<p>Content die niet alleen mooi is, maar klanten oplevert.</p>
 </div>
 
 <div class="card">
-<h3>📱 Social content</h3>
-<p>TikTok & Reels voor bereik, groei en zichtbaarheid.</p>
+<h3>Social media groei</h3>
+<p>Short-form content voor bereik en zichtbaarheid.</p>
 </div>
 
 <div class="card">
-<h3>🎨 Branding</h3>
-<p>Een sterk merk dat direct professioneel aanvoelt.</p>
+<h3>Branding</h3>
+<p>Een merk dat vertrouwen uitstraalt vanaf seconde één.</p>
 </div>
 
 <div class="card">
-<h3>🌐 Websites</h3>
-<p>Websites die bezoekers veranderen in klanten.</p>
-</div>
-
-<div class="card">
-<h3>🤖 Automatisering</h3>
-<p>Slimme AI workflows voor efficiëntere bedrijven.</p>
-</div>
-
-<div class="card">
-<h3>📚 Content strategie</h3>
-<p>Content die autoriteit en vertrouwen opbouwt.</p>
+<h3>Websites</h3>
+<p>Sites die bezoekers omzetten in klanten.</p>
 </div>
 
 </div>
@@ -417,28 +404,33 @@ Daar lossen wij voor je op.
 
 <section id="prijzen">
 
-<h2 class="section-title">Indicatieve prijzen</h2>
+<p class="section-subtitle">Eenvoudig & transparant</p>
+<h2 class="section-title">Prijzen</h2>
 
 <div class="grid">
 
 <div class="card">
-<h3>Logo ontwerp</h3>
-<div class="price">vanaf €149</div>
+<h3>Logo</h3>
+<p>Professioneel ontwerp</p>
+<div class="price">vanaf €129</div>
 </div>
 
 <div class="card">
-<h3>Branding pakket</h3>
-<div class="price">vanaf €399</div>
+<h3>Branding</h3>
+<p>Complete uitstraling</p>
+<div class="price">vanaf €349</div>
 </div>
 
 <div class="card">
-<h3>Promo video</h3>
-<div class="price">vanaf €249</div>
+<h3>Video</h3>
+<p>Promo / social content</p>
+<div class="price">vanaf €199</div>
 </div>
 
 <div class="card">
 <h3>Website</h3>
-<div class="price">vanaf €599</div>
+<p>Conversiegericht design</p>
+<div class="price">vanaf €499</div>
 </div>
 
 </div>
@@ -447,18 +439,15 @@ Daar lossen wij voor je op.
 
 <section id="creaties">
 
-<h2 class="section-title">Cases</h2>
-
-<p class="section-text">
-Binnenkort hier echte projecten, resultaten en klantcases.
-</p>
+<p class="section-subtitle">Resultaten</p>
+<h2 class="section-title">Creaties</h2>
 
 <div class="grid">
 
-<div class="placeholder">Project 01</div>
-<div class="placeholder">Project 02</div>
-<div class="placeholder">Project 03</div>
-<div class="placeholder">Jouw project</div>
+<div class="card">Project 01</div>
+<div class="card">Project 02</div>
+<div class="card">Project 03</div>
+<div class="card">Jouw project</div>
 
 </div>
 
@@ -466,42 +455,39 @@ Binnenkort hier echte projecten, resultaten en klantcases.
 
 <section id="faq">
 
+<p class="section-subtitle">Support</p>
 <h2 class="section-title">FAQ</h2>
 
 <div class="faq">
-<strong>Hoe snel leveren jullie?</strong>
-<p>Meestal binnen enkele dagen tot 2 weken afhankelijk van het project.</p>
+<strong>Hoe snel werken jullie?</strong>
+<p>Meestal binnen enkele dagen tot 2 weken.</p>
 </div>
 
 <div class="faq">
-<strong>Kan ik klein starten?</strong>
-<p>Ja, je kunt ook alleen een logo of video laten maken.</p>
+<strong>Kun je klein starten?</strong>
+<p>Ja, losse opdrachten zijn mogelijk.</p>
 </div>
 
 <div class="faq">
 <strong>Hoe snel reageren jullie?</strong>
-<p>Meestal binnen een paar uur via WhatsApp.</p>
+<p>Meestal binnen een paar uur.</p>
 </div>
 
 </section>
 
 <section class="contact" id="contact">
 
-<h2>Klaar om op te vallen?</h2>
+<h2>Klaar om er echt uit te springen?</h2>
 
-<p>
-Laat je bedrijf er niet langer gemiddeld uitzien.
+<p>Laat je merk niet langer verdwijnen tussen de rest.</p>
 
-Begin vandaag met groeien.
-</p>
-
-<a href="https://wa.me/31657971118?text=Hey%20Vormiq,%20ik%20wil%20een%20gratis%20kennismaking" class="btn-primary">
-💬 Start gesprek
+<a href="https://wa.me/31657971118?text=Hey%20Vormiq,%20ik%20wil%20starten" class="btn-primary">
+Start gesprek
 </a>
 
 </section>
 
-<footer>
+<footer style="text-align:center;padding:50px;color:#777;">
 Vormiq — Vorm. Groei. Resultaat.
 </footer>
 
