@@ -70,7 +70,7 @@ border-bottom:1px solid rgba(255,255,255,.05);
 z-index:999;
 }
 
-.logo{height:130px;}
+.logo{height:130px; width:auto;}
 
 nav{display:flex;gap:25px;}
 
@@ -338,154 +338,114 @@ z-index:999;
 <div class="cursor"></div>
 
 <header>
-
-<img src="logo.png" class="logo">
-
-<nav>
-    <a href="#prijzen">Prijzen</a>
-    <a href="#creaties">Cases</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-</nav>
-
+    <img src="logo.png" class="logo" alt="Vormiq Logo">
+    <nav>
+        <a href="#prijzen" aria-label="Prijzen">Prijzen</a>
+        <a href="#creaties" aria-label="Cases">Cases</a>
+        <a href="#faq" aria-label="Veelgestelde vragen">FAQ</a>
+        <a href="#contact" aria-label="Contact opnemen">Contact</a>
+    </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-
-<h1>
-Stop met content maken.<br>
-<span class="gradient">Start met domineren 🚀</span>
-</h1>
-
-<p>
-AI content & branding systemen die aandacht omzetten in groei, leads en autoriteit.
-</p>
-
-<div class="buttons">
-<a class="btn btn-primary" href="https://wa.me/31657971118">🔥 Start direct</a>
-<a class="btn btn-secondary" href="#creaties">Bekijk cases</a>
-</div>
-
+    <h1>Stop met content maken.<br>
+    <span class="gradient">Start met domineren 🚀</span></h1>
+    <p>AI content & branding systemen die aandacht omzetten in groei, leads en autoriteit.</p>
+    <div class="buttons">
+        <a class="btn btn-primary" href="https://wa.me/31657971118" aria-label="Start direct via WhatsApp">🔥 Start direct</a>
+        <a class="btn btn-secondary" href="#creaties" aria-label="Bekijk onze cases">Bekijk cases</a>
+    </div>
 </section>
 
-<!-- STATS -->
 <section class="reveal">
-
-<div class="subtitle">📊 RESULTATEN</div>
-<div class="title">Bewezen impact</div>
-
-<div class="stats">
-
-<div class="stat"><h3>12.4M+</h3><p>Views 📈</p></div>
-<div class="stat"><h3>68K+</h3><p>Engagement 💬</p></div>
-<div class="stat"><h3>+420%</h3><p>Growth 🚀</p></div>
-
-</div>
-
+    <div class="subtitle">📊 RESULTATEN</div>
+    <div class="title">Bewezen impact</div>
+    <div class="stats">
+        <div class="stat"><h3>12.4M+</h3><p>Views 📈</p></div>
+        <div class="stat"><h3>68K+</h3><p>Engagement 💬</p></div>
+        <div class="stat"><h3>+420%</h3><p>Growth 🚀</p></div>
+    </div>
 </section>
 
-<!-- PRICING -->
 <section id="prijzen" class="reveal">
-
-<div class="subtitle">💰 PRIJZEN</div>
-<div class="title">Toegankelijke pakketten</div>
-
-<div class="pricing">
-
-<div class="price-card">
-<h3>Starter</h3>
-<div class="price">€89+</div>
-<p>Logo & branding basis</p>
-</div>
-
-<div class="price-card">
-<h3>Growth</h3>
-<div class="price">€179+</div>
-<p>AI video content + strategie</p>
-</div>
-
-<div class="price-card">
-<h3>Domination</h3>
-<div class="price">€399+</div>
-<p>Full brand + content systeem</p>
-</div>
-
-</div>
-
+    <div class="subtitle">💰 PRIJZEN</div>
+    <div class="title">Toegankelijke pakketten</div>
+    <div class="pricing">
+        <div class="price-card">
+            <h3>Starter</h3>
+            <div class="price">€89+</div>
+            <p>Logo & branding basis</p>
+        </div>
+        <div class="price-card">
+            <h3>Growth</h3>
+            <div class="price">€179+</div>
+            <p>AI video content + strategie</p>
+        </div>
+        <div class="price-card">
+            <h3>Domination</h3>
+            <div class="price">€399+</div>
+            <p>Full brand + content systeem</p>
+        </div>
+    </div>
 </section>
 
-<!-- CASES -->
 <section id="creaties" class="reveal">
-
-<div class="subtitle">🎬 CASES</div>
-<div class="title">AI content experimenten</div>
-
-<div class="text">
-Virale AI video formats getest op maximale aandacht en engagement.
-</div>
-
-<div class="grid">
-
-<div class="card"><video src="verward.mp4" muted playsinline loop preload="metadata"></video></div>
-<div class="card"><video src="skiezo.mp4" muted playsinline loop preload="metadata"></video></div>
-<div class="card"><video src="teletubbies.mp4" muted playsinline loop preload="metadata"></video></div>
-<div class="card"><video src="flodders.mp4" muted playsinline loop preload="metadata"></video></div>
-
-</div>
-
+    <div class="subtitle">🎬 CASES</div>
+    <div class="title">AI content experimenten</div>
+    <div class="text">Virale AI video formats getest op maximale aandacht en engagement.</div>
+    <div class="grid">
+        <div class="card"><video src="verward.mp4" muted playsinline loop preload="metadata"></video></div>
+        <div class="card"><video src="skiezo.mp4" muted playsinline loop preload="metadata"></video></div>
+        <div class="card"><video src="teletubbies.mp4" muted playsinline loop preload="metadata"></video></div>
+        <div class="card"><video src="flodders.mp4" muted playsinline loop preload="metadata"></video></div>
+    </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq" class="reveal">
-
-<div class="subtitle">❓ FAQ</div>
-<div class="title">Alles wat je moet weten</div>
-
-<div class="faq"><strong>Hoe snel zie ik resultaat?</strong><p>Meestal binnen 7–14 dagen eerste groei in views en engagement.</p></div>
-
-<div class="faq"><strong>Moet ik al een groot merk hebben?</strong><p>Nee, wij helpen vanaf 0 bouwen.</p></div>
-
-<div class="faq"><strong>Wat leveren jullie precies?</strong><p>AI content, branding en growth systemen.</p></div>
-
+    <div class="subtitle">❓ FAQ</div>
+    <div class="title">Alles wat je moet weten</div>
+    <div class="faq" role="button" aria-expanded="false"><strong>Hoe snel zie ik resultaat?</strong><p>Meestal binnen 7–14 dagen eerste groei in views en engagement.</p></div>
+    <div class="faq" role="button" aria-expanded="false"><strong>Moet ik al een groot merk hebben?</strong><p>Nee, wij helpen vanaf 0 bouwen.</p></div>
+    <div class="faq" role="button" aria-expanded="false"><strong>Wat leveren jullie precies?</strong><p>AI content, branding en growth systemen.</p></div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact reveal">
-
-<h2>🚀 Klaar om te domineren?</h2>
-
-<div class="buttons">
-<a class="btn btn-primary" href="https://wa.me/31657971118">💬 Start via WhatsApp</a>
-</div>
-
+    <h2>🚀 Klaar om te domineren?</h2>
+    <div class="buttons">
+        <a class="btn btn-primary" href="https://wa.me/31657971118" aria-label="Start via WhatsApp">💬 Start via WhatsApp</a>
+    </div>
 </section>
 
-<a class="whatsapp" href="https://wa.me/31657971118">💬</a>
+<a class="whatsapp" href="https://wa.me/31657971118" aria-label="Contact via WhatsApp">💬</a>
 
 <script>
+    /* ANIMATIE BIJ SCROLLEN */
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, { threshold: 0.1 });
 
-const reveals = document.querySelectorAll(".reveal");
+    document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 
-function reveal(){
-reveals.forEach(el=>{
-const top = el.getBoundingClientRect().top;
-if(top < window.innerHeight - 120){
-el.classList.add("active");
-}
-});
-}
+    /* FAQ INTERACTIE */
+    document.querySelectorAll(".faq").forEach(faq => {
+        faq.addEventListener("click", () => {
+            faq.classList.toggle("active");
+            faq.setAttribute("aria-expanded", faq.classList.contains("active"));
+        });
+    });
 
-window.addEventListener("scroll", reveal);
-reveal();
-
-/* FAQ */
-document.querySelectorAll(".faq").forEach(faq=>{
-faq.addEventListener("click", ()=>{
-faq.classList.toggle("active");
-});
-});
-
+    /* VIDEO HOVER EFFECT */
+    document.querySelectorAll('.card video').forEach(video => {
+        video.parentElement.addEventListener('mouseenter', () => video.play());
+        video.parentElement.addEventListener('mouseleave', () => {
+            video.pause();
+            video.currentTime = 0;
+        });
+    });
 </script>
 
 </body>
