@@ -64,7 +64,7 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:25px 8%;
+padding:22px 8%;
 background:rgba(5,5,5,.75);
 backdrop-filter:blur(20px);
 border-bottom:1px solid rgba(255,255,255,.03);
@@ -78,9 +78,9 @@ gap:18px;
 }
 
 .logo{
-height:90px;
+height:105px;
 width:auto;
-border-radius:12px;
+border-radius:14px;
 }
 
 /* NAV */
@@ -110,9 +110,15 @@ color:black;
 padding:14px 26px;
 border-radius:999px;
 font-weight:800;
+transition:.3s;
 }
 
-/* HERO */
+.cta:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(204,255,0,.25);
+}
+
+/* HERO ANIMATION */
 .hero{
 min-height:85vh;
 display:flex;
@@ -121,6 +127,17 @@ justify-content:center;
 align-items:center;
 text-align:center;
 padding:0 8%;
+
+opacity:0;
+transform:translateY(30px);
+animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 .badge{
@@ -131,7 +148,7 @@ border-radius:999px;
 font-size:13px;
 font-weight:700;
 color:#CCFF00;
-margin-bottom:30px;
+margin-bottom:25px;
 }
 
 .hero h1{
@@ -150,8 +167,8 @@ background:linear-gradient(90deg,#CCFF00,#7B00FF);
 .hero p{
 max-width:800px;
 color:#999;
-font-size:1.3rem;
-margin-bottom:40px;
+font-size:1.25rem;
+margin-bottom:35px;
 }
 
 /* BUTTONS */
@@ -160,15 +177,23 @@ display:flex;
 gap:20px;
 justify-content:center;
 flex-wrap:wrap;
+margin-top:10px;
 }
 
 .btn-primary{
 background:#CCFF00;
 color:black;
-padding:18px 36px;
+padding:18px 38px;
 border-radius:999px;
-font-weight:800;
+font-weight:900;
 text-decoration:none;
+transition:.3s;
+display:inline-block;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 35px rgba(204,255,0,.35);
 }
 
 .btn-secondary{
@@ -187,6 +212,19 @@ margin:auto;
 scroll-margin-top:120px;
 }
 
+/* SCROLL ANIMATIONS */
+.reveal{
+opacity:0;
+transform:translateY(40px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* TEXT */
 .section-subtitle{
 color:#CCFF00;
 font-size:13px;
@@ -206,28 +244,32 @@ margin-bottom:20px;
 color:#999;
 font-size:1.2rem;
 max-width:850px;
+line-height:1.7;
 }
 
-/* GRID */
+/* PREMIUM VIDEO GRID */
 .tiktok-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:50px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:60px;
 }
 
 .video-card{
-background:#111;
-border-radius:24px;
+position:relative;
+border-radius:28px;
 overflow:hidden;
 aspect-ratio:9/16;
-border:1px solid rgba(255,255,255,.04);
-transition:.3s;
+background:#0f0f0f;
+border:1px solid rgba(255,255,255,.05);
+box-shadow:0 20px 60px rgba(0,0,0,.6);
+transition:.4s;
 }
 
 .video-card:hover{
-transform:scale(1.03);
+transform:translateY(-8px) scale(1.02);
 border-color:#CCFF00;
+box-shadow:0 25px 80px rgba(204,255,0,.12);
 }
 
 .video-card video{
@@ -244,6 +286,7 @@ padding:120px 8%;
 border-radius:40px;
 }
 
+/* WHATSAPP */
 .whatsapp{
 position:fixed;
 right:30px;
@@ -270,10 +313,7 @@ box-shadow:0 8px 30px rgba(37,211,102,.5);
     </div>
 
     <nav>
-        <a href="#diensten">Diensten</a>
-        <a href="#prijzen">Prijzen</a>
         <a href="#creaties">Creaties</a>
-        <a href="#faq">FAQ</a>
         <a href="#contact" class="cta">Contact</a>
     </nav>
 </header>
@@ -283,43 +323,46 @@ box-shadow:0 8px 30px rgba(37,211,102,.5);
 
     <h1>Stop met content maken.<br><span class="gradient">Start met domineren.</span></h1>
 
-    <p>Wij bouwen merken die niet genegeerd kunnen worden.</p>
+    <p>
+        Wij bouwen merken die niet concurreren op kwaliteit, maar op perceptie en dominantie.
+    </p>
 
     <div class="buttons">
-        <a href="https://wa.me/31657971118" class="btn-primary">Start direct</a>
+        <a href="https://wa.me/31657971118" class="btn-primary">Start direct op WhatsApp</a>
         <a href="#creaties" class="btn-secondary">Bekijk werk</a>
     </div>
 </section>
 
-<section id="creaties">
+<section id="creaties" class="reveal">
     <p class="section-subtitle">Portfolio</p>
     <h2 class="section-title">AI-content & virale experimenten</h2>
 
     <p class="section-text">
-        Mix van AI satire content en virality tests.
+        Een selectie van AI satire content en virality tests die worden gebruikt om te analyseren
+        welke formats aandacht trekken, retention verhogen en schaalbare content structuren creëren.
     </p>
 
     <div class="tiktok-grid">
 
-        <div class="video-card">
+        <div class="video-card reveal">
             <video controls>
                 <source src="verward.mp4" type="video/mp4">
             </video>
         </div>
 
-        <div class="video-card">
+        <div class="video-card reveal">
             <video controls>
                 <source src="skiezo.mp4" type="video/mp4">
             </video>
         </div>
 
-        <div class="video-card">
+        <div class="video-card reveal">
             <video controls>
                 <source src="teletubbies.mp4" type="video/mp4">
             </video>
         </div>
 
-        <div class="video-card">
+        <div class="video-card reveal">
             <video controls>
                 <source src="flodders.mp4" type="video/mp4">
             </video>
@@ -328,9 +371,9 @@ box-shadow:0 8px 30px rgba(37,211,102,.5);
     </div>
 </section>
 
-<section class="contact" id="contact">
+<section id="contact" class="contact reveal">
     <h2>Klaar om te groeien?</h2>
-    <p>Laat je merk niet ondersneeuwen.</p>
+    <p>Laat je merk niet verdwijnen in ruis — bouw dominantie.</p>
 
     <a href="https://wa.me/31657971118" class="btn-primary">Start nu</a>
 </section>
@@ -339,7 +382,4 @@ box-shadow:0 8px 30px rgba(37,211,102,.5);
 © 2026 Vormiq
 </footer>
 
-<a href="https://wa.me/31657971118" class="whatsapp">💬</a>
-
-</body>
-</html>
+<a href="https://wa.me/31657971118" class="whatsapp">💬</
