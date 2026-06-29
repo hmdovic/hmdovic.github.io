@@ -3,55 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Vormiq | Branding & Content die klanten oplevert</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>Vormiq</title>
 
 <style>
 
-/* RESET */
+/* BASE */
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 }
 
 body{
-font-family:'Inter',sans-serif;
 background:#050505;
 color:white;
-line-height:1.6;
+font-family:Inter, sans-serif;
 overflow-x:hidden;
-padding-top:120px;
-}
-
-/* BACKGROUND */
-body::before{
-content:"";
-position:fixed;
-width:700px;
-height:700px;
-background:#CCFF00;
-filter:blur(220px);
-opacity:.06;
-top:-250px;
-left:-150px;
-z-index:-1;
-}
-
-body::after{
-content:"";
-position:fixed;
-width:700px;
-height:700px;
-background:#7B00FF;
-filter:blur(250px);
-opacity:.08;
-right:-250px;
-bottom:-250px;
-z-index:-1;
 }
 
 /* HEADER */
@@ -60,288 +27,161 @@ position:fixed;
 top:0;
 width:100%;
 display:flex;
-justify-content:space-between;
 align-items:center;
-padding:18px 8%;
-background:rgba(5,5,5,.75);
-backdrop-filter:blur(20px);
-border-bottom:1px solid rgba(255,255,255,.05);
+justify-content:space-between;
+padding:18px 6%;
+background:rgba(5,5,5,0.75);
+backdrop-filter:blur(18px);
+border-bottom:1px solid rgba(255,255,255,0.05);
 z-index:999;
 }
 
-/* LOGO GROTER (FIX) */
+/* LOGO */
 .logo-wrapper{
 display:flex;
-align-items:center;
-gap:18px;
+flex-direction:column;
+align-items:flex-start;
+gap:2px;
 }
 
 .logo{
-height:85px;
+height:68px;
 width:auto;
 }
 
-.logo-text{
-font-size:1.8rem;
-font-weight:900;
-letter-spacing:-1.5px;
-background:linear-gradient(90deg,#fff,#888);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-
-/* NAV */
-nav{
-display:flex;
-gap:28px;
-align-items:center;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:600;
-font-size:0.95rem;
-opacity:.7;
-transition:.3s;
-}
-
-nav a:hover{
-opacity:1;
-color:#CCFF00;
-}
-
-.cta{
-background:#CCFF00;
-color:black;
-padding:12px 24px;
-border-radius:999px;
-font-weight:800;
+.logo-sub{
+font-size:0.7rem;
+color:#888;
+letter-spacing:2px;
+text-transform:uppercase;
 }
 
 /* HERO */
 .hero{
-min-height:85vh;
+min-height:70vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:0 8%;
+padding:130px 6% 60px;
 }
 
 .hero h1{
-font-size:clamp(2.8rem,6vw,5.2rem);
+font-size:clamp(2.2rem,5vw,4rem);
 font-weight:900;
 line-height:1.05;
-letter-spacing:-2px;
-margin-bottom:25px;
-}
-
-.gradient{
-background:linear-gradient(90deg,#CCFF00,#7B00FF);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
 }
 
 .hero p{
-max-width:780px;
+max-width:720px;
 color:#aaa;
-font-size:1.2rem;
-margin-bottom:35px;
-}
-
-/* TRUST BAR */
-.trust{
-display:inline-flex;
-gap:12px;
-padding:12px 22px;
-border:1px solid rgba(255,255,255,.06);
-border-radius:50px;
-background:rgba(255,255,255,.02);
-margin-bottom:35px;
-font-weight:600;
-color:#fff;
-}
-
-.trust span{
-color:#CCFF00;
-}
-
-/* BUTTONS */
-.buttons{
-display:flex;
-gap:18px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.btn-primary{
-background:#CCFF00;
-color:black;
-padding:16px 34px;
-border-radius:999px;
-font-weight:800;
-text-decoration:none;
-transition:.3s;
-}
-
-.btn-primary:hover{
-transform:translateY(-3px);
-}
-
-.btn-secondary{
-border:1px solid rgba(255,255,255,.15);
-padding:16px 34px;
-border-radius:999px;
-text-decoration:none;
-color:white;
-}
-
-/* SECTIONS */
-section{
-padding:120px 8%;
-max-width:1300px;
-margin:auto;
-}
-
-/* TITLES */
-.section-subtitle{
-color:#CCFF00;
-font-weight:800;
-letter-spacing:3px;
-font-size:12px;
-margin-bottom:15px;
-text-transform:uppercase;
-}
-
-.section-title{
-font-size:3rem;
-font-weight:900;
-margin-bottom:20px;
-}
-
-/* TEXT */
-.section-text{
-color:#aaa;
-font-size:1.2rem;
-max-width:850px;
+margin-top:15px;
+font-size:1.05rem;
 }
 
 /* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:50px;
+gap:18px;
+padding:60px 6%;
 }
 
-/* CARDS */
+/* VIDEO CARD */
 .card{
-background:rgba(15,15,15,0.6);
-border:1px solid rgba(255,255,255,.05);
-padding:35px;
-border-radius:22px;
-transition:.3s;
+position:relative;
+border-radius:18px;
+overflow:hidden;
+background:black;
+border:1px solid rgba(255,255,255,0.06);
+cursor:pointer;
+transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-8px);
+transform:scale(1.02);
 border-color:#CCFF00;
 }
 
-.card h3{
-font-size:1.4rem;
-margin-bottom:10px;
-}
-
-.card p{
-color:#999;
-}
-
-/* CASE GRID */
-.case-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-margin-top:50px;
-}
-
-.case-card{
-background:rgba(15,15,15,0.6);
-border-radius:24px;
-overflow:hidden;
-border:1px solid rgba(255,255,255,.05);
-transition:.4s;
-}
-
-.case-card:hover{
-transform:translateY(-10px);
-border-color:#CCFF00;
-}
-
-.case-media{
-height:420px;
-background:black;
-}
-
-.case-media video{
+.card video{
 width:100%;
-height:100%;
+height:420px;
 object-fit:cover;
+display:block;
 }
 
-.case-content{
-padding:18px;
-}
-
-.case-content h3{
-font-weight:800;
-margin-bottom:6px;
-}
-
-.case-content p{
-color:#CCFF00;
-font-weight:700;
-margin-bottom:5px;
-}
-
-.case-content span{
-color:#888;
-font-size:0.9rem;
-}
-
-/* CONTACT */
-.contact{
-text-align:center;
-padding:140px 8%;
-}
-
-.contact h2{
-font-size:3.2rem;
-font-weight:900;
-}
-
-.contact p{
-color:#aaa;
-margin:20px auto 40px;
-max-width:700px;
-}
-
-/* WHATSAPP */
-.whatsapp{
+/* MODAL */
+.modal{
 position:fixed;
-bottom:30px;
-right:30px;
-width:70px;
-height:70px;
-background:#25D366;
-border-radius:50%;
-display:flex;
+inset:0;
+background:rgba(0,0,0,0.95);
+display:none;
 align-items:center;
 justify-content:center;
-font-size:32px;
-box-shadow:0 10px 30px rgba(0,0,0,0.4);
+z-index:1000;
+}
+
+.modal video{
+width:80%;
+max-height:85vh;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:25px;
+font-size:2.5rem;
+cursor:pointer;
+color:white;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+header{
+padding:14px 5%;
+}
+
+.logo{
+height:58px;
+}
+
+.logo-sub{
+font-size:0.65rem;
+}
+
+.hero{
+padding:140px 5% 50px;
+}
+
+.hero h1{
+font-size:2.1rem;
+}
+
+.hero p{
+font-size:1rem;
+}
+
+.grid{
+grid-template-columns:1fr;
+gap:14px;
+padding:40px 5%;
+}
+
+.card video{
+height:70vh;
+}
+
+.modal video{
+width:95%;
+}
+
+.close{
+top:15px;
+right:15px;
+}
+
 }
 
 </style>
@@ -351,156 +191,66 @@ box-shadow:0 10px 30px rgba(0,0,0,0.4);
 
 <header>
     <div class="logo-wrapper">
-        <img src="logo.png" class="logo" alt="Vormiq logo">
-        <span class="logo-text">VORMIQ</span>
+        <img src="logo.png" class="logo">
+        <div class="logo-sub">Creative Studio</div>
     </div>
-
-    <nav>
-        <a href="#diensten">Diensten</a>
-        <a href="#creaties">Cases</a>
-        <a href="#contact" class="cta">Contact</a>
-    </nav>
 </header>
 
 <section class="hero">
+    <h1>Creatieve content die aandacht pakt.</h1>
+    <p>Satire, experimenten en short-form visuals ontworpen voor bereik en impact.</p>
+</section>
 
-    <div class="trust">
-        <span>5.4M+</span> views gegenereerd • content die aandacht wint
+<section class="grid">
+
+    <div class="card" onclick="openVideo('verward.mp4')">
+        <video src="verward.mp4" muted loop autoplay playsinline></video>
     </div>
 
-    <h1>
-        Je bedrijf is niet het probleem.<br>
-        <span class="gradient">Je zichtbaarheid wel.</span>
-    </h1>
+    <div class="card" onclick="openVideo('flodders.mp4')">
+        <video src="flodders.mp4" muted loop autoplay playsinline></video>
+    </div>
 
-    <p>
-        Wij bouwen content en branding die ervoor zorgt dat klanten je serieus nemen nog vóór ze contact opnemen.
-    </p>
+    <div class="card" onclick="openVideo('skiezo.mp4')">
+        <video src="skiezo.mp4" muted loop autoplay playsinline></video>
+    </div>
 
-    <div class="buttons">
-        <a href="#contact" class="btn-primary">Start gesprek</a>
-        <a href="#creaties" class="btn-secondary">Bekijk cases</a>
+    <div class="card" onclick="openVideo('teletubbies.mp4')">
+        <video src="teletubbies.mp4" muted loop autoplay playsinline></video>
     </div>
 
 </section>
 
-<section id="diensten">
-    <p class="section-subtitle">Diensten</p>
-    <h2 class="section-title">Wat we bouwen</h2>
+<!-- FULLSCREEN MODAL -->
+<div class="modal" id="modal">
+    <div class="close" onclick="closeVideo()">×</div>
+    <video id="modalVideo" controls autoplay></video>
+</div>
 
-    <div class="grid">
+<script>
 
-        <div class="card">
-            <h3>Branding</h3>
-            <p>Een uitstraling die vertrouwen wekt zonder uitleg nodig te hebben.</p>
-        </div>
+function openVideo(src){
+    const modal = document.getElementById('modal');
+    const video = document.getElementById('modalVideo');
 
-        <div class="card">
-            <h3>Short-form content</h3>
-            <p>Video’s die scrollen stoppen en aandacht vasthouden.</p>
-        </div>
+    modal.style.display = 'flex';
+    video.src = src;
+    video.muted = false;
+}
 
-        <div class="card">
-            <h3>Websites</h3>
-            <p>Sites die niet alleen mooi zijn, maar ook overtuigen.</p>
-        </div>
+function closeVideo(){
+    const modal = document.getElementById('modal');
+    const video = document.getElementById('modalVideo');
 
-    </div>
-</section>
+    modal.style.display = 'none';
+    video.pause();
+    video.src = "";
+}
 
-<section id="creaties">
-    <p class="section-subtitle">Cases</p>
-    <h2 class="section-title">Echte content. Echte aandacht.</h2>
-
-    <div class="case-grid">
-
-        <div class="case-card">
-            <div class="case-media"><video src="verward.mp4" muted loop autoplay></video></div>
-            <div class="case-content">
-                <h3>Verward</h3>
-                <p>High-retention hook</p>
-                <span>Aandacht test • virale structuur</span>
-            </div>
-        </div>
-
-        <div class="case-card">
-            <div class="case-media"><video src="flodders.mp4" muted loop autoplay></video></div>
-            <div class="case-content">
-                <h3>Flodders</h3>
-                <p>Entertainment format</p>
-                <span>Humor + bereik</span>
-            </div>
-        </div>
-
-        <div class="case-card">
-            <div class="case-media"><video src="skiezo.mp4" muted loop autoplay></video></div>
-            <div class="case-content">
-                <h3>Skiezo</h3>
-                <p>Concept content</p>
-                <span>Creatieve test</span>
-            </div>
-        </div>
-
-        <div class="case-card">
-            <div class="case-media"><video src="teletubbies.mp4" muted loop autoplay></video></div>
-            <div class="case-content">
-                <h3>Teletubbies</h3>
-                <p>Nostalgie hook</p>
-                <span>Emotionele trigger</span>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <h2>Wil je dat mensen je serieus nemen?</h2>
-    <p>Dan moet je online uitstraling dat eerst bewijzen.</p>
-
-    <a href="https://wa.me/31657971118" class="btn-primary">Start via WhatsApp</a>
-</section>
-
-<a class="whatsapp" href="https://wa.me/31657971118">💬</a>
+</script>
 
 </body>
-</html>       </div>
-        <div class="video-card">
-            <iframe src="https://www.tiktok.com/embed/7386055998135246112" style="width:100%; height:100%; border:none;"></iframe>
-        </div>
-        <div class="video-card">
-            <iframe src="https://www.tiktok.com/embed/7386060136206142752" style="width:100%; height:100%; border:none;"></iframe>
-        </div>
-        <div class="video-card">
-            <iframe src="https://www.tiktok.com/embed/7386061327178829088" style="width:100%; height:100%; border:none;"></iframe>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ SECTION -->
-<section id="faq">
-    <p class="section-subtitle">Veelgestelde vragen</p>
-    <h2 class="section-title">Alles wat je moet weten</h2>
-    
-    <div class="faq">
-        <strong>Hoe snel zien we resultaat?</strong>
-        <p>Onze video's en branding uitingen gaan direct na oplevering live. De eerste tractie en stijging in merkaanvragen vindt vaak al binnen de eerste week plaats.</p>
-    </div>
-    <div class="faq">
-        <strong>Is het mogelijk om met een losse opdracht te starten?</strong>
-        <p>Ja, absoluut. Veel klanten starten met een los logo of een set video's om onze kwaliteit te ervaren, en schalen daarna op naar een langdurige samenwerking.</p>
-    </div>
-    <div class="faq">
-        <strong>Hoe verloopt de communicatie?</strong>
-        <p>Snel en direct. We werken via korte lijnen op WhatsApp zodat we direct kunnen schakelen bij actuele trends of spoedopdrachten.</p>
-    </div>
-</section>
-
-<!-- FINAL CALL TO ACTION -->
-<section class="contact" id="contact">
-    <h2>Klaar om de markt te claimen?</h2>
-    <p>Laat je business niet langer ondersneeuwen door concurrenten die minder goed zijn, maar wel luider schreeuwen.</p>
-    
-    <a href="https://wa.me/31657971118?text=Hey%20Vormiq,%20ik%20wil%20starten%20met%20opschalen" class="btn-primary">
+</html>met%20opschalen" class="btn-primary">
         Start nu jouw groeitraject
     </a>
 </section>
