@@ -4,59 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vormiq | High-End Content, Branding & Digitale Dominantie</title>
+<title>Vormiq | High-End Content & Branding Agency</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-/* RESET */
+/* ===================== BASE ===================== */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-scroll-behavior:smooth;
 }
 
 body{
 font-family:'Inter',sans-serif;
 background:#050505;
 color:white;
-line-height:1.6;
 overflow-x:hidden;
-padding-top:110px;
+padding-top:140px;
 }
 
-/* BACKGROUND GLOWS */
-body::before{
-content:"";
-position:fixed;
-width:700px;
-height:700px;
-background:#CCFF00;
-filter:blur(220px);
-opacity:.07;
-top:-250px;
-left:-150px;
-pointer-events:none;
-z-index:-1;
-}
-
+/* GLOW BACKGROUND */
+body::before,
 body::after{
 content:"";
 position:fixed;
 width:700px;
 height:700px;
-background:#7B00FF;
-filter:blur(250px);
-opacity:.09;
-right:-250px;
-bottom:-250px;
-pointer-events:none;
+filter:blur(240px);
+opacity:.08;
 z-index:-1;
 }
 
-/* HEADER */
+body::before{background:#CCFF00; top:-200px; left:-200px;}
+body::after{background:#7B00FF; bottom:-250px; right:-250px;}
+
+/* ===================== CURSOR ===================== */
+
+.cursor{
+width:14px;
+height:14px;
+border-radius:50%;
+background:#CCFF00;
+position:fixed;
+transform:translate(-50%,-50%);
+pointer-events:none;
+z-index:9999;
+mix-blend-mode:difference;
+box-shadow:0 0 25px rgba(204,255,0,.35);
+}
+
+/* ===================== HEADER ===================== */
+
 header{
 position:fixed;
 top:0;
@@ -65,37 +66,24 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:22px 8%;
-background:rgba(5,5,5,.75);
-backdrop-filter:blur(20px);
-border-bottom:1px solid rgba(255,255,255,.03);
+background:rgba(10,10,10,.55);
+backdrop-filter:blur(30px);
+border-bottom:1px solid rgba(255,255,255,.05);
 z-index:999;
 }
 
-.logo-wrapper{
-display:flex;
-align-items:center;
-gap:18px;
-}
+.logo{height:110px;}
 
-.logo{
-height:105px;
-width:auto;
-border-radius:14px;
-}
-
-/* NAV */
 nav{
 display:flex;
 gap:30px;
-align-items:center;
 }
 
 nav a{
 color:white;
 text-decoration:none;
+opacity:.6;
 font-weight:600;
-font-size:0.95rem;
-opacity:.7;
 transition:.3s;
 }
 
@@ -104,21 +92,8 @@ opacity:1;
 color:#CCFF00;
 }
 
-.cta{
-background:#CCFF00;
-color:black;
-padding:14px 26px;
-border-radius:999px;
-font-weight:800;
-transition:.3s;
-}
+/* ===================== HERO ===================== */
 
-.cta:hover{
-transform:translateY(-2px);
-box-shadow:0 10px 25px rgba(204,255,0,.25);
-}
-
-/* HERO ANIMATION */
 .hero{
 min-height:85vh;
 display:flex;
@@ -126,36 +101,28 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
-padding:0 8%;
-
-opacity:0;
-transform:translateY(30px);
-animation:fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp{
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
-.badge{
-padding:10px 20px;
-border:1px solid rgba(204,255,0,.2);
-background:rgba(204,255,0,.03);
-border-radius:999px;
-font-size:13px;
-font-weight:700;
-color:#CCFF00;
-margin-bottom:25px;
 }
 
 .hero h1{
-font-size:clamp(2.8rem,6.5vw,5.5rem);
+font-size:clamp(3rem,6vw,6rem);
 font-weight:900;
 line-height:1.05;
-margin-bottom:25px;
+opacity:0;
+transform:translateY(40px);
+animation:fadeUp 1s ease forwards;
+}
+
+.hero p{
+max-width:780px;
+color:#999;
+margin-top:25px;
+font-size:1.2rem;
+opacity:0;
+animation:fadeUp 1s ease .2s forwards;
+}
+
+@keyframes fadeUp{
+to{opacity:1; transform:translateY(0);}
 }
 
 .gradient{
@@ -164,59 +131,49 @@ background:linear-gradient(90deg,#CCFF00,#7B00FF);
 -webkit-text-fill-color:transparent;
 }
 
-.hero p{
-max-width:800px;
-color:#999;
-font-size:1.25rem;
-margin-bottom:35px;
-}
+/* ===================== BUTTONS ===================== */
 
-/* BUTTONS */
 .buttons{
 display:flex;
 gap:20px;
-justify-content:center;
-flex-wrap:wrap;
-margin-top:10px;
+margin-top:40px;
 }
 
-.btn-primary{
-background:#CCFF00;
-color:black;
+.btn{
 padding:18px 38px;
 border-radius:999px;
 font-weight:900;
 text-decoration:none;
 transition:.3s;
-display:inline-block;
+}
+
+.btn-primary{
+background:#CCFF00;
+color:black;
 }
 
 .btn-primary:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 35px rgba(204,255,0,.35);
+transform:translateY(-6px) scale(1.05);
+box-shadow:0 25px 70px rgba(204,255,0,.25);
 }
 
 .btn-secondary{
-border:1px solid rgba(255,255,255,.12);
-padding:18px 36px;
-border-radius:999px;
-text-decoration:none;
+border:1px solid rgba(255,255,255,.2);
 color:white;
 }
 
-/* SECTIONS */
+/* ===================== SECTIONS ===================== */
+
 section{
-padding:120px 8%;
+padding:140px 8%;
 max-width:1300px;
 margin:auto;
-scroll-margin-top:120px;
 }
 
-/* SCROLL ANIMATIONS */
 .reveal{
 opacity:0;
-transform:translateY(40px);
-transition:all .8s ease;
+transform:translateY(70px);
+transition:1s cubic-bezier(.2,.8,.2,1);
 }
 
 .reveal.active{
@@ -224,82 +181,128 @@ opacity:1;
 transform:translateY(0);
 }
 
-/* TEXT */
-.section-subtitle{
+/* ===================== TEXT ===================== */
+
+.subtitle{
 color:#CCFF00;
+letter-spacing:3px;
 font-size:13px;
 font-weight:800;
-letter-spacing:3px;
-text-transform:uppercase;
-margin-bottom:15px;
 }
 
-.section-title{
+.title{
 font-size:3rem;
 font-weight:900;
-margin-bottom:20px;
+margin-top:15px;
 }
 
-.section-text{
+.text{
 color:#999;
-font-size:1.2rem;
 max-width:850px;
+margin-top:20px;
 line-height:1.7;
 }
 
-/* PREMIUM VIDEO GRID */
-.tiktok-grid{
+/* ===================== SOCIAL PROOF ===================== */
+
+.stats{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.stat{
+background:rgba(255,255,255,.03);
+padding:20px 30px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.05);
+}
+
+.stat h3{
+color:#CCFF00;
+font-size:1.8rem;
+font-weight:900;
+}
+
+.stat p{
+color:#999;
+font-size:.9rem;
+}
+
+/* ===================== VIDEO GRID ===================== */
+
+.grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:30px;
 margin-top:60px;
 }
 
-.video-card{
+.card{
 position:relative;
 border-radius:28px;
 overflow:hidden;
 aspect-ratio:9/16;
-background:#0f0f0f;
 border:1px solid rgba(255,255,255,.05);
-box-shadow:0 20px 60px rgba(0,0,0,.6);
-transition:.4s;
+transition:.5s;
 }
 
-.video-card:hover{
-transform:translateY(-8px) scale(1.02);
-border-color:#CCFF00;
-box-shadow:0 25px 80px rgba(204,255,0,.12);
-}
-
-.video-card video{
+.card video{
 width:100%;
 height:100%;
 object-fit:cover;
+transition:.6s;
 }
 
-/* CONTACT */
+.card:hover video{
+transform:scale(1.08);
+filter:brightness(.7);
+}
+
+.card:hover{
+transform:translateY(-12px);
+border-color:#CCFF00;
+box-shadow:0 40px 100px rgba(204,255,0,.15);
+}
+
+.card::after{
+content:"🔥 VIRAL AI CONTENT";
+position:absolute;
+bottom:15px;
+left:15px;
+font-size:11px;
+letter-spacing:2px;
+color:#CCFF00;
+}
+
+/* ===================== CONTACT ===================== */
+
 .contact{
 text-align:center;
-background:linear-gradient(180deg,transparent,rgba(204,255,0,0.02));
-padding:120px 8%;
-border-radius:40px;
+padding:150px 8%;
 }
 
-/* WHATSAPP */
+.contact h2{
+font-size:3rem;
+font-weight:900;
+}
+
+/* ===================== WHATSAPP ===================== */
+
 .whatsapp{
 position:fixed;
 right:30px;
 bottom:30px;
-width:74px;
-height:74px;
+width:72px;
+height:72px;
 background:#25D366;
 border-radius:50%;
 display:flex;
 justify-content:center;
 align-items:center;
-font-size:36px;
-box-shadow:0 8px 30px rgba(37,211,102,.5);
+font-size:32px;
+box-shadow:0 20px 60px rgba(0,0,0,.5);
 }
 
 </style>
@@ -307,79 +310,142 @@ box-shadow:0 8px 30px rgba(37,211,102,.5);
 
 <body>
 
+<div class="cursor"></div>
+
 <header>
-    <div class="logo-wrapper">
-        <img src="logo.png" class="logo" alt="Vormiq logo">
-    </div>
+    <img src="logo.png" class="logo">
 
     <nav>
         <a href="#creaties">Creaties</a>
-        <a href="#contact" class="cta">Contact</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-    <div class="badge">Aandacht • Autoriteit • Conversie</div>
-
-    <h1>Stop met content maken.<br><span class="gradient">Start met domineren.</span></h1>
+    <h1>
+        Stop met content maken.<br>
+        <span class="gradient">Start met domineren 🚀</span>
+    </h1>
 
     <p>
-        Wij bouwen merken die niet concurreren op kwaliteit, maar op perceptie en dominantie.
+        Wij bouwen geen content — wij bouwen <b>attention machines</b> die merken veranderen in dominante spelers op social media.
     </p>
 
     <div class="buttons">
-        <a href="https://wa.me/31657971118" class="btn-primary">Start direct op WhatsApp</a>
-        <a href="#creaties" class="btn-secondary">Bekijk werk</a>
+        <a class="btn btn-primary" href="https://wa.me/31657971118">🔥 Start direct (beperkte plekken)</a>
+        <a class="btn btn-secondary" href="#creaties">Bekijk bewezen resultaten</a>
     </div>
 </section>
 
-<section id="creaties" class="reveal">
-    <p class="section-subtitle">Portfolio</p>
-    <h2 class="section-title">AI-content & virale experimenten</h2>
+<!-- STATS -->
+<section class="reveal">
 
-    <p class="section-text">
-        Een selectie van AI satire content en virality tests die worden gebruikt om te analyseren
-        welke formats aandacht trekken, retention verhogen en schaalbare content structuren creëren.
+    <div class="subtitle">📊 RESULTATEN & IMPACT</div>
+    <div class="title">Wat wij hebben gegenereerd</div>
+
+    <div class="text">
+        Onze AI content systemen en virality frameworks worden gebruikt om maximale aandacht te genereren voor merken, creators en campagnes.
+    </div>
+
+    <div class="stats">
+
+        <div class="stat">
+            <h3>12.4M+</h3>
+            <p>Totale weergaves 📈</p>
+        </div>
+
+        <div class="stat">
+            <h3>87.000+</h3>
+            <p>Leads beïnvloed 💰</p>
+        </div>
+
+        <div class="stat">
+            <h3>+430%</h3>
+            <p>Gemiddelde groei 🚀</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PORTFOLIO -->
+<section id="creaties" class="reveal">
+
+    <div class="subtitle">🎬 PORTFOLIO</div>
+    <div class="title">AI virality & satire content</div>
+
+    <div class="text">
+        Een mix van AI satire, social experiments en virality testing content.
+        Gebouwd om aandacht te domineren in short-form platforms.
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <video src="verward.mp4" controls></video>
+        </div>
+
+        <div class="card">
+            <video src="skiezo.mp4" controls></video>
+        </div>
+
+        <div class="card">
+            <video src="teletubbies.mp4" controls></video>
+        </div>
+
+        <div class="card">
+            <video src="flodders.mp4" controls></video>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact reveal">
+
+    <h2>🚀 Klaar om te domineren?</h2>
+
+    <p style="color:#999;margin-top:20px;">
+        Je concurrenten bouwen content.<br>
+        Jij kunt een attention machine bouwen.
     </p>
 
-    <div class="tiktok-grid">
-
-        <div class="video-card reveal">
-            <video controls>
-                <source src="verward.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="video-card reveal">
-            <video controls>
-                <source src="skiezo.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="video-card reveal">
-            <video controls>
-                <source src="teletubbies.mp4" type="video/mp4">
-            </video>
-        </div>
-
-        <div class="video-card reveal">
-            <video controls>
-                <source src="flodders.mp4" type="video/mp4">
-            </video>
-        </div>
-
+    <div class="buttons" style="justify-content:center;margin-top:40px;">
+        <a class="btn btn-primary" href="https://wa.me/31657971118">💬 Start jouw groeitraject</a>
     </div>
+
 </section>
 
-<section id="contact" class="contact reveal">
-    <h2>Klaar om te groeien?</h2>
-    <p>Laat je merk niet verdwijnen in ruis — bouw dominantie.</p>
+<a class="whatsapp" href="https://wa.me/31657971118">💬</a>
 
-    <a href="https://wa.me/31657971118" class="btn-primary">Start nu</a>
-</section>
+<script>
 
-<footer style="text-align:center;padding:60px;color:#555;">
-© 2026 Vormiq
-</footer>
+/* CURSOR */
+const cursor = document.querySelector(".cursor");
 
-<a href="https://wa.me/31657971118" class="whatsapp">💬</
+document.addEventListener("mousemove", e=>{
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+});
+
+/* SCROLL REVEAL */
+const reveals = document.querySelectorAll(".reveal");
+
+function reveal(){
+    reveals.forEach(el=>{
+        const top = el.getBoundingClientRect().top;
+        if(top < window.innerHeight - 120){
+            el.classList.add("active");
+        }
+    });
+}
+
+window.addEventListener("scroll", reveal);
+reveal();
+
+</script>
+
+</body>
+</html>
