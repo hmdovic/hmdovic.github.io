@@ -24,6 +24,7 @@ background:#050505;
 color:white;
 overflow-x:hidden;
 padding-top:140px;
+cursor: none; /* Verbergt standaard cursor */
 }
 
 /* GLOW */
@@ -48,11 +49,11 @@ height:14px;
 border-radius:50%;
 background:#CCFF00;
 position:fixed;
-transform:translate(-50%,-50%);
 pointer-events:none;
 z-index:9999;
 mix-blend-mode:difference;
 box-shadow:0 0 25px rgba(204,255,0,.35);
+transition: transform 0.1s ease;
 }
 
 /* HEADER */
@@ -293,19 +294,12 @@ transition:.4s;
 width:100%;
 height:100%;
 object-fit:cover;
-transition:.6s ease;
-filter:brightness(.95);
 }
 
 .card:hover{
 transform:translateY(-10px);
 border-color:#CCFF00;
 box-shadow:0 30px 80px rgba(204,255,0,.15);
-}
-
-.card:hover video{
-transform:scale(1.08);
-filter:brightness(.7);
 }
 
 /* CONTACT */
@@ -347,6 +341,7 @@ z-index:999;
     </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
     <h1>Stop met content maken.<br>
     <span class="gradient">Start met domineren 🚀</span></h1>
@@ -357,6 +352,7 @@ z-index:999;
     </div>
 </section>
 
+<!-- STATS -->
 <section class="reveal">
     <div class="subtitle">📊 RESULTATEN</div>
     <div class="title">Bewezen impact</div>
@@ -367,6 +363,7 @@ z-index:999;
     </div>
 </section>
 
+<!-- PRICING -->
 <section id="prijzen" class="reveal">
     <div class="subtitle">💰 PRIJZEN</div>
     <div class="title">Toegankelijke pakketten</div>
@@ -389,18 +386,20 @@ z-index:999;
     </div>
 </section>
 
+<!-- CASES -->
 <section id="creaties" class="reveal">
     <div class="subtitle">🎬 CASES</div>
     <div class="title">AI content experimenten</div>
     <div class="text">Virale AI video formats getest op maximale aandacht en engagement.</div>
     <div class="grid">
-        <div class="card"><video src="verward.mp4" muted playsinline loop preload="metadata"></video></div>
-        <div class="card"><video src="skiezo.mp4" muted playsinline loop preload="metadata"></video></div>
-        <div class="card"><video src="teletubbies.mp4" muted playsinline loop preload="metadata"></video></div>
-        <div class="card"><video src="flodders.mp4" muted playsinline loop preload="metadata"></video></div>
+        <div class="card"><video src="verward.mp4" autoplay muted playsinline loop></video></div>
+        <div class="card"><video src="skiezo.mp4" autoplay muted playsinline loop></video></div>
+        <div class="card"><video src="teletubbies.mp4" autoplay muted playsinline loop></video></div>
+        <div class="card"><video src="flodders.mp4" autoplay muted playsinline loop></video></div>
     </div>
 </section>
 
+<!-- FAQ -->
 <section id="faq" class="reveal">
     <div class="subtitle">❓ FAQ</div>
     <div class="title">Alles wat je moet weten</div>
@@ -409,6 +408,7 @@ z-index:999;
     <div class="faq" role="button" aria-expanded="false"><strong>Wat leveren jullie precies?</strong><p>AI content, branding en growth systemen.</p></div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact reveal">
     <h2>🚀 Klaar om te domineren?</h2>
     <div class="buttons">
@@ -419,6 +419,13 @@ z-index:999;
 <a class="whatsapp" href="https://wa.me/31657971118" aria-label="Contact via WhatsApp">💬</a>
 
 <script>
+    /* CUSTOM CURSOR LOGICA */
+    const cursor = document.querySelector('.cursor');
+    document.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+    });
+
     /* ANIMATIE BIJ SCROLLEN */
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -435,15 +442,6 @@ z-index:999;
         faq.addEventListener("click", () => {
             faq.classList.toggle("active");
             faq.setAttribute("aria-expanded", faq.classList.contains("active"));
-        });
-    });
-
-    /* VIDEO HOVER EFFECT */
-    document.querySelectorAll('.card video').forEach(video => {
-        video.parentElement.addEventListener('mouseenter', () => video.play());
-        video.parentElement.addEventListener('mouseleave', () => {
-            video.pause();
-            video.currentTime = 0;
         });
     });
 </script>
